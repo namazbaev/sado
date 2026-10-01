@@ -1,5 +1,7 @@
 # Sado
 
+[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/gjpapdekmcjbifpelcdplpoiocmgmknc)
+
 Inglizcha kurs videolariga o'zbekcha subtitr (tarjima o'z API keyingiz bilan); o'zbekcha ovoz Microsoft Edge'da yoki Azure bilan.
 
 [Sado — maxfiylik siyosati](PRIVACY.uz.md)
