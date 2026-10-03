@@ -1,6 +1,6 @@
 # Sado — maxfiylik siyosati
 
-Oxirgi yangilanish: 2026-yil 1-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
+Oxirgi yangilanish: 2026-yil 3-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
 
 Sado — kurs videolarining inglizcha subtitrini o'zbekchaga tarjima qilib, video ustida o'zbekcha subtitr sifatida
 ko'rsatadigan yoki video bilan sinxron o'zbekcha ovozda o'qib beradigan brauzer kengaytmasi.
@@ -41,6 +41,8 @@ Rozilik faqat tanlangan servisga tegishli: boshqasiga o'tsangiz, qayta so'raladi
 servis almashgan yoki oluvchilar ro'yxati o'zgargan), panelda **Roziman** tugmali qisqa so'rov chiqadi; uni
 bosmaguningizcha hech narsa yuborilmaydi. To'liq ro'yxat (oluvchilar, qurilmada nima qoladi, Gemini sharti)
 sozlamalar sahifasining "Maxfiylik" bo'limida. Rozilik (versiya, servis va sana) shu qurilmada saqlanadi.
+Rozilikni istalgan vaqtda qaytarib olishingiz mumkin: Sozlamalar → "Maxfiylik" → **Rozilikni qaytarib olish**.
+Shundan keyin dars matni hech qayerga yuborilmaydi, ochiq darslarda tarjima va ovoz darhol to'xtaydi.
 
 ## Qurilmada nima saqlanadi
 
@@ -70,7 +72,7 @@ Kengaytma boshqa so'rovlarni saqlamaydi, hech qaysi so'rovni to'smaydi yoki o'zg
 
 ## Qanday o'chirish mumkin
 
-- **Tarjima keshi:** Sozlamalar → "Kutubxona" → "Hammasini o'chirish".
+- **Tarjima keshi:** Sozlamalar → "Kutubxona" → darsning o'chirish tugmasi (bitta dars) yoki "Hammasini o'chirish".
 - **Tarjima servisi API keyi:** Sozlamalar → "Tarjima" → "API key" → "O'chirish".
 - **Hammasi** (Azure API keyi, lug'atlar, o'rganilgan talaffuzlar, rozilik ham): kengaytmani brauzerdan o'chiring —
   brauzer uning barcha mahalliy ma'lumotini ham o'chiradi.

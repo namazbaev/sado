@@ -1,6 +1,6 @@
 # Sado — Privacy Policy
 
-Last updated: October 1, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
+Last updated: October 3, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
 
 Sado is a browser extension that translates the English subtitles of course videos into Uzbek and shows them as
 Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the video.
@@ -42,7 +42,8 @@ if you switch to another one, it is asked again. If consent is missing (for exam
 or when the list of recipients changes), the panel shows a short prompt with a "Roziman" (I agree) button; until
 you press it, nothing is sent. The full list (recipients, what stays on the device, the Gemini notice) is in the
 "Maxfiylik" (Privacy) section of the settings page. The consent (version, service and date) is stored on this
-device.
+device. You can withdraw it at any time: Settings → "Maxfiylik" → "Rozilikni qaytarib olish" (Withdraw consent).
+After that no lesson text is sent anywhere, and translation and voice stop at once in open lessons.
 
 ## What is stored on your device
 
@@ -74,7 +75,8 @@ no other requests and never blocks or modifies any request.
 
 ## How to delete it
 
-- **Translation cache:** Settings → "Kutubxona" (Library) → "Hammasini o'chirish" (Delete all).
+- **Translation cache:** Settings → "Kutubxona" (Library) → a lesson's delete button (one lesson) or
+  "Hammasini o'chirish" (Delete all).
 - **Translation service key:** Settings → "Tarjima" (Translation) → "API key" → "O'chirish" (Delete).
 - **Everything** (including the Azure key, dictionaries, learned pronunciations and consent): remove the extension
   from the browser — the browser deletes all of its local data as well.
