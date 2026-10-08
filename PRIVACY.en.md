@@ -1,6 +1,6 @@
 # Sado — Privacy Policy
 
-Last updated: October 3, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
+Last updated: October 7, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
 
 Sado is a browser extension that translates the English subtitles of course videos into Uzbek and shows them as
 Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the video.
@@ -19,6 +19,7 @@ Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the vid
 |---|---|---|
 | The **one** translation service you select in the settings: Google (Gemini API), Anthropic, OpenAI, OpenRouter or Groq | When a lesson is translated | The English subtitle text of the current lesson (sentences and their neighbouring sentences), the terms from your glossary that must stay unchanged, a list of technical terms whose pronunciation is learned, and the model name. The request goes directly to the service's API with your API key |
 | Microsoft — the Edge browser's online voices ("Online (Natural)": Sardor, Madina) | When an online Uzbek voice in Edge reads the dub | The Uzbek translated sentences. Edge sends them to Microsoft's cloud service to be spoken |
+| Google — Gemini voice (model `gemini-3.8-flash-lite-tts`) | Only if the browser has no Uzbek voice (for example Google Chrome) and the selected translation service is Google (Gemini) | The Uzbek translated sentences (several per request), with the same Gemini API key, to `generativelanguage.googleapis.com`. Not used in Edge, where the browser has an Uzbek voice, and not used with other translation services |
 | Microsoft — Azure Speech | Only if "Azure" is selected as the voice engine | The Uzbek translated sentences, with your Azure key, to `<region>.tts.speech.microsoft.com` |
 | The lesson site (Udemy, master.dev or a site you enabled) | When subtitles are loaded | On Udemy, first a request to Udemy's own API on the same site, with your Udemy session as the lesson page itself does, for the current lesson's title and list of subtitle files. Then the extension downloads from that site, without cookies, a subtitle file Udemy listed for the lesson or the lesson page itself requested |
 
@@ -29,7 +30,7 @@ text.
 
 Each service processes the data it receives under its own terms and privacy policy.
 
-**Gemini free tier.** On the free tier Google may use the text you send to improve its products. The Gemini API
+**Gemini free tier.** On the free tier Google may use the text you send (both for translation and for the Gemini voice) to improve its products. The Gemini API
 may be used only by people aged 18 or over. Details: [Gemini API Additional Terms of Service](https://ai.google.dev/gemini-api/terms).
 If you do not want this, choose a paid tier that does not use your data for training, or another service.
 
@@ -37,7 +38,7 @@ If you do not want this, choose a paid tier that does not use your data for trai
 
 Consent is given when you set up the translation service: directly above the "Roziman — saqlash va tekshirish"
 (I agree — save and test) button, the welcome page and the settings page say that the lesson subtitles go to the
-selected service and the Uzbek text goes to Microsoft for the voice. The consent covers only the selected service:
+selected service and the Uzbek text goes to Microsoft for the voice or, if the browser has no Uzbek voice and the service is Gemini, to Google. The consent covers only the selected service:
 if you switch to another one, it is asked again. If consent is missing (for example after switching the service
 or when the list of recipients changes), the panel shows a short prompt with a "Roziman" (I agree) button; until
 you press it, nothing is sent. The full list (recipients, what stays on the device, the Gemini notice) is in the
@@ -59,6 +60,8 @@ other devices.
 - **Translation cache** — per lesson: the lesson identifier (on sites you enabled, the page address) and title, the
   English subtitle text, the Uzbek translation, timings and which model translated it. The cache means you do not
   pay the service again when you reopen that lesson.
+- **Voice audio cache** — in the extension's IndexedDB: the audio synthesised by Azure or the Gemini voice, so a
+  replay does not send the sentences again.
 - **Diagnostics log** — the code of the last 50 errors (for example `auth`, `timeout`), the kind of work
   (translation, subtitles, voice, model list), time, duration and count. Subtitle text, translations and keys are
   never written to it. The log is never sent anywhere by itself: Settings → "Diagnostikani nusxalash" (Copy
