@@ -1,6 +1,6 @@
 # Sado
 
-[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/gjpapdekmcjbifpelcdplpoiocmgmknc)
+[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/gjpapdekmcjbifpelcdplpoiocmgmknc) · [Chrome Web Store](https://chromewebstore.google.com/detail/mmjajpodjkpgnaekkonbdjkpecogidal)
 
 Inglizcha kurs videolariga o'zbekcha subtitr (o'z API keyingiz bilan); ovoz — Chrome'da Gemini, Edge'da o'z ovozi yoki Azure bilan.
 
