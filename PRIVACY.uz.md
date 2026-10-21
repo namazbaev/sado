@@ -1,6 +1,6 @@
 # Sado — maxfiylik siyosati
 
-Oxirgi yangilanish: 2026-yil 7-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
+Oxirgi yangilanish: 2026-yil 22-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
 
 Sado — kurs videolarining inglizcha subtitrini o'zbekchaga tarjima qilib, video ustida o'zbekcha subtitr sifatida
 ko'rsatadigan yoki video bilan sinxron o'zbekcha ovozda o'qib beradigan brauzer kengaytmasi.
@@ -53,13 +53,16 @@ sinxronlanmaydi.
 - **API keylari** (tarjima servisi, Azure) — kengaytmaning fon qismida. Veb-sahifa ham, sahifadagi
   kengaytma skripti ham ularni o'qiy olmaydi.
 - **Sozlamalar** — tanlangan servis va model, ovoz dvigateli va tanlangan ovoz, Azure hududi, panel rejimi
-  (O'chiq / Subtitr / Ovoz) va subtitr ko'rinishi, rozilik yozuvi.
+  (O'chiq / Subtitr / Ovoz) va subtitr ko'rinishi, rozilik yozuvi, siz qo'ygan kunlik token chegarasi.
 - **Lug'atlar** — siz yozgan atamalar va talaffuzlar, tarjima servisidan o'rganilgan atamalar talaffuzi.
 - **Tarjima keshi** — har dars uchun: dars identifikatori (siz yoqqan saytlarda — sahifa manzili) va sarlavhasi,
   inglizcha subtitr matni, o'zbekcha tarjima, vaqtlar va qaysi model tarjima qilgani. Kesh o'sha darsni qayta
   ochganingizda servisga qayta pul to'lamaslik uchun kerak.
 - **Ovoz keshi** — kengaytmaning IndexedDB'ida: Azure yoki Gemini TTS sintez qilgan audio, shunda qayta eshitganda
   jumlalar qayta yuborilmaydi.
+- **Gemini TTS kunlik hisobi** — bugungi sana, shu kunda yuborilgan ovoz so'rovlari soni va limit tugaganmi, hamda
+  API keyning qaytarib bo'lmaydigan barmoq izi (SHA-256 boshi, key'ning o'zi emas). Panel qancha ovoz qolganini
+  shundan ko'rsatadi; yozuv har kuni yangilanadi va hech qayerga yuborilmaydi.
 - **Diagnostika jurnali** — oxirgi 50 ta xatoning kodi (masalan `auth`, `timeout`), ish turi (tarjima, subtitr,
   ovoz, model ro'yxati), vaqti, davomiyligi va soni. Subtitr matni, tarjima va API keylar unga yozilmaydi. Jurnal
   o'zi hech qayerga yuborilmaydi: Sozlamalar → "Diagnostikani nusxalash" uni kengaytma versiyasi, brauzer nomi,
@@ -67,6 +70,15 @@ sinxronlanmaydi.
 - **Model tezligi** — oxirgi 20 ta servis va model juftligi uchun: soniyasiga o'rtacha chiqish tokeni, o'lchovlar
   soni va oxirgisining vaqti. Matn saqlanmaydi. "Diagnostikani nusxalash" ga (vaqtsiz) kiradi, o'zi hech qayerga
   yuborilmaydi.
+- **Kunlik sarf** — bugungi sana, shu kunda servis javob bergan so'rovlar (tarjima va Gemini TTS) soni va ular
+  sarflagan tokenlar. Sado siz qo'ygan kunlik chegarada shundan to'xtaydi va chegara maydoni ostida bugungi sarfni
+  ko'rsatadi; yozuv har kuni yangilanadi va hech qayerga yuborilmaydi.
+- **Ovoz sinxronligi** — oxirgi 10 ta dars uchun: sayt, dars identifikatori, ovoz dvigateli va ovoz videoga
+  qanchalik ulgurgani (eng katta kechikish, sekinlashtirilgan soniyalar, to'xtashlar, o'qilgan va tashlab ketilgan
+  jumlalar soni). Matn saqlanmaydi. "Diagnostikani nusxalash" ga dars identifikatorisiz kiradi, o'zi hech qayerga
+  yuborilmaydi.
+- **Ovoz vaqti** — oxirgi 10 ta ishlatilgan ovoz uchun o'lchangan nutq tezligi va boshlanish kechikishi: ovoz har
+  jumlaning vaqtiga sig'ishi uchun. Matn saqlanmaydi.
 
 Vaqtinchalik (`chrome.storage.session`, brauzer yopilganda o'chadi): dars sahifasi so'ragan subtitr fayllari va
 subtitr manzilini topishga yordam beradigan so'rovlar (masalan master.dev dars ma'lumoti) manzili, turi va qaysi

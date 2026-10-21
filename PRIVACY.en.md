@@ -1,6 +1,6 @@
 # Sado — Privacy Policy
 
-Last updated: October 7, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
+Last updated: October 22, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
 
 Sado is a browser extension that translates the English subtitles of course videos into Uzbek and shows them as
 Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the video.
@@ -54,7 +54,7 @@ other devices.
 - **API keys** (translation service, Azure) — in the extension's background part. Neither the web page nor the
   extension's script on the page can read them.
 - **Settings** — selected service and model, voice engine and selected voice, Azure region, the panel mode
-  (Off / Subtitles / Voice) and subtitle display options, the consent record.
+  (Off / Subtitles / Voice) and subtitle display options, the consent record, the daily token limit you set.
 - **Dictionaries** — the terms and pronunciations you wrote, and term pronunciations learned from the translation
   service.
 - **Translation cache** — per lesson: the lesson identifier (on sites you enabled, the page address) and title, the
@@ -62,6 +62,9 @@ other devices.
   pay the service again when you reopen that lesson.
 - **Voice audio cache** — in the extension's IndexedDB: the audio synthesised by Azure or Gemini TTS, so a
   replay does not send the sentences again.
+- **Gemini TTS daily counter** — today's date, the number of voice requests sent that day and whether the limit was
+  reached, plus a one-way fingerprint of the API key (a SHA-256 prefix, not the key itself). The panel uses it to
+  show how much voice is left; the record is replaced every day and is never sent anywhere.
 - **Diagnostics log** — the code of the last 50 errors (for example `auth`, `timeout`), the kind of work
   (translation, subtitles, voice, model list), time, duration and count. Subtitle text, translations and keys are
   never written to it. The log is never sent anywhere by itself: Settings → "Diagnostikani nusxalash" (Copy
@@ -70,6 +73,15 @@ other devices.
 - **Model speed** — for each of the last 20 service and model pairs: the average number of output tokens per second,
   the number of measurements and the time of the last one. No text is stored. It is included in "Copy diagnostics"
   (without the time) and is never sent anywhere by itself.
+- **Daily usage** — today's date, the number of requests the service answered that day (translation and Gemini
+  TTS) and the tokens they used. Sado uses it to stop at the daily limit you set and shows today's total under the
+  limit field; the record is replaced every day and is never sent anywhere.
+- **Voice sync** — for each of the last 10 lessons: the site, the lesson identifier, the voice engine and how well
+  the voice kept up with the video (longest delay, seconds slowed down, pauses, sentences spoken and skipped). No
+  text is stored. It is included in "Copy diagnostics" without the lesson identifier and is never sent anywhere by
+  itself.
+- **Voice timing** — for each of the last 10 voices used: the measured speech rate and start delay, so the voice
+  fits each sentence's time. No text is stored.
 
 Temporarily (`chrome.storage.session`, cleared when the browser closes): the address, type and requesting page of
 subtitle files requested by the lesson page and of requests that help locate the subtitle address (for example
