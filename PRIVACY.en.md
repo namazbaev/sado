@@ -84,6 +84,8 @@ other devices.
   itself.
 - **Voice timing** — for each of the last 10 voices used: the measured speech rate and start delay, so the voice
   fits each sentence's time. No text is stored.
+- **Update marker** — the version Sado was updated to (only the version number): the popup shows a short "Sado
+  yangilandi" (Sado updated) list, and the record is removed when "Tushunarli" (Got it) is clicked.
 
 Temporarily (`chrome.storage.session`, cleared when the browser closes): the address, type and requesting page of
 subtitle files requested by the lesson page and of requests that help locate the subtitle address (for example

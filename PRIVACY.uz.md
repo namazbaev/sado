@@ -82,6 +82,8 @@ sinxronlanmaydi.
   yuborilmaydi.
 - **Ovoz vaqti** — oxirgi 10 ta ishlatilgan ovoz uchun o'lchangan nutq tezligi va boshlanish kechikishi: ovoz har
   jumlaning vaqtiga sig'ishi uchun. Matn saqlanmaydi.
+- **Yangilanish belgisi** — Sado qaysi versiyaga yangilangani (faqat versiya raqami): popup "Sado yangilandi"
+  ro'yxatini ko'rsatadi, "Tushunarli" bosilganda yozuv o'chiriladi.
 
 Vaqtinchalik (`chrome.storage.session`, brauzer yopilganda o'chadi): dars sahifasi so'ragan subtitr fayllari va
 subtitr manzilini topishga yordam beradigan so'rovlar (masalan master.dev dars ma'lumoti) manzili, turi va qaysi
