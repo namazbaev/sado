@@ -1,6 +1,6 @@
 # Sado — Privacy Policy
 
-Last updated: October 22, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
+Last updated: October 23, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
 
 Sado is a browser extension that translates the English subtitles of course videos into Uzbek and shows them as
 Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the video.
@@ -67,9 +67,10 @@ other devices.
   show how much voice is left; the record is replaced every day and is never sent anywhere.
 - **Diagnostics log** — the code of the last 50 errors (for example `auth`, `timeout`), the kind of work
   (translation, subtitles, voice, model list), time, duration and count. Subtitle text, translations and keys are
-  never written to it. The log is never sent anywhere by itself: Settings → "Diagnostikani nusxalash" (Copy
-  diagnostics) copies it together with the extension version, browser name, service and model name and voice
-  status, and you decide whom to send it to.
+  never written to it. The log is never sent anywhere by itself: Settings → "Yordam" (Help) → "Diagnostikani
+  nusxalash" (Copy diagnostics) copies it together with the extension version, browser name, service and model name
+  and voice status, and you decide whom to send it to. "Telegram'da xabar berish" (Report on Telegram) also only
+  copies it and opens the developer's Telegram page: you write and send the message yourself.
 - **Model speed** — for each of the last 20 service and model pairs: the average number of output tokens per second,
   the number of measurements and the time of the last one. No text is stored. It is included in "Copy diagnostics"
   (without the time) and is never sent anywhere by itself.
@@ -114,4 +115,5 @@ consent again before the first request to a new recipient.
 
 ## Contact
 
+Telegram: [t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev) · Email:
 [namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com)

@@ -1,6 +1,6 @@
 # Sado — maxfiylik siyosati
 
-Oxirgi yangilanish: 2026-yil 22-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
+Oxirgi yangilanish: 2026-yil 23-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
 
 Sado — kurs videolarining inglizcha subtitrini o'zbekchaga tarjima qilib, video ustida o'zbekcha subtitr sifatida
 ko'rsatadigan yoki video bilan sinxron o'zbekcha ovozda o'qib beradigan brauzer kengaytmasi.
@@ -65,8 +65,10 @@ sinxronlanmaydi.
   shundan ko'rsatadi; yozuv har kuni yangilanadi va hech qayerga yuborilmaydi.
 - **Diagnostika jurnali** — oxirgi 50 ta xatoning kodi (masalan `auth`, `timeout`), ish turi (tarjima, subtitr,
   ovoz, model ro'yxati), vaqti, davomiyligi va soni. Subtitr matni, tarjima va API keylar unga yozilmaydi. Jurnal
-  o'zi hech qayerga yuborilmaydi: Sozlamalar → "Diagnostikani nusxalash" uni kengaytma versiyasi, brauzer nomi,
-  servis va model nomi hamda ovoz holati bilan birga nusxalaydi, kimga yuborishni esa o'zingiz hal qilasiz.
+  o'zi hech qayerga yuborilmaydi: Sozlamalar → "Yordam" → "Diagnostikani nusxalash" uni kengaytma versiyasi,
+  brauzer nomi, servis va model nomi hamda ovoz holati bilan birga nusxalaydi, kimga yuborishni esa o'zingiz hal
+  qilasiz. "Telegram'da xabar berish" ham faqat nusxalaydi va dasturchining Telegram sahifasini ochadi: xabarni
+  o'zingiz yozasiz va yuborasiz.
 - **Model tezligi** — oxirgi 20 ta servis va model juftligi uchun: soniyasiga o'rtacha chiqish tokeni, o'lchovlar
   soni va oxirgisining vaqti. Matn saqlanmaydi. "Diagnostikani nusxalash" ga (vaqtsiz) kiradi, o'zi hech qayerga
   yuborilmaydi.
@@ -111,4 +113,5 @@ birinchi so'rovdan oldin rozilikni qayta so'raydi.
 
 ## Aloqa
 
+Telegram: [t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev) · E-pochta:
 [namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com)
