@@ -64,7 +64,8 @@ sinxronlanmaydi.
   API keyning qaytarib bo'lmaydigan barmoq izi (SHA-256 boshi, key'ning o'zi emas). Panel qancha ovoz qolganini
   shundan ko'rsatadi; yozuv har kuni yangilanadi va hech qayerga yuborilmaydi.
 - **Diagnostika jurnali** — oxirgi 50 ta xatoning kodi (masalan `auth`, `timeout`), ish turi (tarjima, subtitr,
-  ovoz, model ro'yxati), vaqti, davomiyligi va soni. Subtitr matni, tarjima va API keylar unga yozilmaydi. Jurnal
+  ovoz, model ro'yxati), vaqti, davomiyligi va soni, subtitr xatosida esa qaysi saytda (masalan `udemy`; sahifa
+  manzili emas). Subtitr matni, tarjima va API keylar unga yozilmaydi. Jurnal
   o'zi hech qayerga yuborilmaydi: Sozlamalar → "Yordam" → "Diagnostikani nusxalash" uni kengaytma versiyasi,
   brauzer nomi, servis va model nomi hamda ovoz holati bilan birga nusxalaydi, kimga yuborishni esa o'zingiz hal
   qilasiz. "Telegram'da xabar berish" ham faqat nusxalaydi va dasturchining Telegram sahifasini ochadi: xabarni

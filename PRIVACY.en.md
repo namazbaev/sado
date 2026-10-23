@@ -66,7 +66,8 @@ other devices.
   reached, plus a one-way fingerprint of the API key (a SHA-256 prefix, not the key itself). The panel uses it to
   show how much voice is left; the record is replaced every day and is never sent anywhere.
 - **Diagnostics log** — the code of the last 50 errors (for example `auth`, `timeout`), the kind of work
-  (translation, subtitles, voice, model list), time, duration and count. Subtitle text, translations and keys are
+  (translation, subtitles, voice, model list), time, duration and count, and for a subtitle error the site (for
+  example `udemy`; not the page address). Subtitle text, translations and keys are
   never written to it. The log is never sent anywhere by itself: Settings → "Yordam" (Help) → "Diagnostikani
   nusxalash" (Copy diagnostics) copies it together with the extension version, browser name, service and model name
   and voice status, and you decide whom to send it to. "Telegram'da xabar berish" (Report on Telegram) also only
