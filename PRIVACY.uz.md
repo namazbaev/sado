@@ -93,7 +93,9 @@ Kengaytma boshqa so'rovlarni saqlamaydi, hech qaysi so'rovni to'smaydi yoki o'zg
 - **Tarjima keshi:** Sozlamalar → "Kutubxona" → darsning o'chirish tugmasi (bitta dars) yoki "Hammasini o'chirish".
 - **Tarjima servisi API keyi:** Sozlamalar → "Tarjima" → "API key" → "O'chirish".
 - **Hammasi** (Azure API keyi, lug'atlar, o'rganilgan talaffuzlar, rozilik ham): kengaytmani brauzerdan o'chiring —
-  brauzer uning barcha mahalliy ma'lumotini ham o'chiradi.
+  brauzer uning barcha mahalliy ma'lumotini ham o'chiradi. Shundan keyin brauzer ochiq repodagi qisqa
+  [fikr sahifasini](https://github.com/namazbaev/sado/blob/main/FEEDBACK.md) ochadi (nima yoqmaganini Telegram'da so'raydi). Manziliga hech qanday ma'lumot
+  qo'shilmaydi; sahifani GitHub odatdagi sahifa kabi ko'rsatadi.
 - Servislar tomonidagi ma'lumot o'sha servisning siyosati bo'yicha o'chiriladi.
 
 ## Sotilmaydi va uzatilmaydi

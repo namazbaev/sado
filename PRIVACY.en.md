@@ -96,7 +96,9 @@ no other requests and never blocks or modifies any request.
   "Hammasini o'chirish" (Delete all).
 - **Translation service key:** Settings → "Tarjima" (Translation) → "API key" → "O'chirish" (Delete).
 - **Everything** (including the Azure key, dictionaries, learned pronunciations and consent): remove the extension
-  from the browser — the browser deletes all of its local data as well.
+  from the browser — the browser deletes all of its local data as well. The browser then opens a short
+  [feedback page](https://github.com/namazbaev/sado/blob/main/FEEDBACK.md) in the public repository (it asks on Telegram what went wrong). Nothing is added to its
+  address; GitHub serves it like any other page.
 - Data held by the services is deleted according to that service's policy.
 
 ## No selling, no transfer
