@@ -82,6 +82,12 @@ other devices.
   the voice kept up with the video (longest delay, seconds slowed down, pauses, sentences spoken and skipped). No
   text is stored. It is included in "Copy diagnostics" without the lesson identifier and is never sent anywhere by
   itself.
+- **Translation stats** — for each of the last 10 lessons (a lesson translated again with another model gets its own
+  entry): the site, the lesson identifier, the service and model, how many sentences were translated, how many
+  requests were answered and the tokens they used (including thinking and cached tokens), how many requests were
+  repeated, split, refused or cut off at the output limit, and how many translations did not fit the sentence's time,
+  stayed in English or contained non-Latin letters. No text is stored. It is included in "Copy
+  diagnostics" without the lesson identifier and is never sent anywhere by itself.
 - **Voice timing** — for each of the last 10 voices used: the measured speech rate and start delay, so the voice
   fits each sentence's time. No text is stored.
 - **Update marker** — the version Sado was updated to (only the version number): the popup shows a short "Sado

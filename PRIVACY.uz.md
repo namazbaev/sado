@@ -80,6 +80,12 @@ sinxronlanmaydi.
   qanchalik ulgurgani (eng katta kechikish, sekinlashtirilgan soniyalar, to'xtashlar, o'qilgan va tashlab ketilgan
   jumlalar soni). Matn saqlanmaydi. "Diagnostikani nusxalash" ga dars identifikatorisiz kiradi, o'zi hech qayerga
   yuborilmaydi.
+- **Tarjima o'lchovi** — oxirgi 10 ta dars uchun (boshqa model bilan qayta tarjima qilingan dars alohida yozuv
+  oladi): sayt, dars identifikatori, servis va model, nechta jumla tarjima qilingani, servis nechta so'rovga javob
+  bergani va ular sarflagan tokenlar (o'ylash va keshdan o'qilgan tokenlar bilan), nechta so'rov qayta yuborilgani,
+  bo'lingani, rad etilgani yoki javob chegarasida kesilgani, nechta tarjima jumla vaqtiga sig'magani, inglizcha
+  qolgani yoki lotin bo'lmagan harf bilan chiqqani. Matn saqlanmaydi. "Diagnostikani nusxalash" ga dars
+  identifikatorisiz kiradi, o'zi hech qayerga yuborilmaydi.
 - **Ovoz vaqti** — oxirgi 10 ta ishlatilgan ovoz uchun o'lchangan nutq tezligi va boshlanish kechikishi: ovoz har
   jumlaning vaqtiga sig'ishi uchun. Matn saqlanmaydi.
 - **Yangilanish belgisi** — Sado qaysi versiyaga yangilangani (faqat versiya raqami): popup "Sado yangilandi"
