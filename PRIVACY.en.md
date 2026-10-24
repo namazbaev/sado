@@ -1,6 +1,6 @@
 # Sado — Privacy Policy
 
-Last updated: October 23, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
+Last updated: October 24, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
 
 Sado is a browser extension that translates the English subtitles of course videos into Uzbek and shows them as
 Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the video.
@@ -21,7 +21,7 @@ Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the vid
 | Microsoft — the Edge browser's online voices ("Online (Natural)": Sardor, Madina) | When an online Uzbek voice in Edge reads the dub | The Uzbek translated sentences. Edge sends them to Microsoft's cloud service to be spoken |
 | Google — Gemini TTS (model `gemini-3.8-flash-lite-tts`) | Only if the browser has no Uzbek voice (for example Google Chrome) and the selected translation service is Google (Gemini) | The Uzbek translated sentences (several per request), with the same Gemini API key, to `generativelanguage.googleapis.com`. Not used in Edge, where the browser has an Uzbek voice, and not used with other translation services |
 | Microsoft — Azure Speech | Only if "Azure" is selected as the voice engine | The Uzbek translated sentences, with your Azure key, to `<region>.tts.speech.microsoft.com` |
-| The lesson site (Udemy, master.dev or a site you enabled) | When subtitles are loaded | On Udemy, first a request to Udemy's own API on the same site, with your Udemy session as the lesson page itself does, for the current lesson's title and list of subtitle files. Then the extension downloads from that site, without cookies, a subtitle file Udemy listed for the lesson or the lesson page itself requested |
+| The lesson site (Udemy, master.dev or a site you enabled) | When subtitles are loaded | On Udemy, first a request to Udemy's own API on the same site, with your Udemy session as the lesson page itself does, for the current lesson's title and list of subtitle files. Then the extension downloads from that site, without cookies, a subtitle file Udemy listed for the lesson or the lesson page itself requested. On YouTube (a site you enabled) it downloads, without cookies, the English track of the captions request the YouTube player itself made; if CC is off, the extension turns CC on for that request and then off again |
 
 The tests on the settings page ("Ulanishni tekshirish" — test connection, "Ovozni eshitish" — play voice sample, and
 listening to a pronunciation) send only the test text or the word you typed to that service — never lesson text.

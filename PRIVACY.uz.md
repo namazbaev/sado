@@ -1,6 +1,6 @@
 # Sado — maxfiylik siyosati
 
-Oxirgi yangilanish: 2026-yil 23-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
+Oxirgi yangilanish: 2026-yil 24-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
 
 Sado — kurs videolarining inglizcha subtitrini o'zbekchaga tarjima qilib, video ustida o'zbekcha subtitr sifatida
 ko'rsatadigan yoki video bilan sinxron o'zbekcha ovozda o'qib beradigan brauzer kengaytmasi.
@@ -21,7 +21,7 @@ ko'rsatadigan yoki video bilan sinxron o'zbekcha ovozda o'qib beradigan brauzer 
 | Microsoft — Edge brauzerining onlayn ovozlari ("Online (Natural)": Sardor, Madina) | Edge'da onlayn o'zbek ovozi dublyaj qilganda | O'zbekcha tarjima jumlalari. Edge ularni o'qish uchun Microsoft'ning bulut servisiga yuboradi |
 | Google — Gemini TTS (model `gemini-3.8-flash-lite-tts`) | Brauzerda o'zbek ovozi bo'lmasa (masalan Google Chrome) va tanlangan tarjima servisi Google (Gemini) bo'lsa | O'zbekcha tarjima jumlalari (bir so'rovda bir nechta), o'sha Gemini API keyingiz bilan `generativelanguage.googleapis.com` manziliga. Brauzerda o'zbek ovozi bor Edge'da va boshqa tarjima servislari bilan ishlatilmaydi |
 | Microsoft — Azure Speech | Sozlamada ovoz dvigateli "Azure" tanlangan bo'lsa | O'zbekcha tarjima jumlalari, sizning Azure API keyingiz bilan `<hudud>.tts.speech.microsoft.com` manziliga |
-| Dars sayti (Udemy, master.dev yoki siz yoqqan sayt) | Subtitr yuklanganda | Udemy'da avval Udemy'ning o'z API'siga shu saytda, dars sahifasining o'zi kabi Udemy sessiyangiz bilan so'rov ketadi: joriy darsning nomi va subtitr fayllari ro'yxati so'raladi. Keyin Udemy dars uchun ko'rsatgan yoki dars sahifasining o'zi so'ragan subtitr faylini kengaytma shu saytdan yuklab oladi (cookie'siz) |
+| Dars sayti (Udemy, master.dev yoki siz yoqqan sayt) | Subtitr yuklanganda | Udemy'da avval Udemy'ning o'z API'siga shu saytda, dars sahifasining o'zi kabi Udemy sessiyangiz bilan so'rov ketadi: joriy darsning nomi va subtitr fayllari ro'yxati so'raladi. Keyin Udemy dars uchun ko'rsatgan yoki dars sahifasining o'zi so'ragan subtitr faylini kengaytma shu saytdan yuklab oladi (cookie'siz). YouTube'da (siz yoqqan sayt) YouTube player'ining o'zi so'ragan subtitrning inglizcha treki cookie'siz yuklanadi; CC o'chiq bo'lsa, kengaytma shu so'rov uchun CC'ni yoqadi va keyin yana o'chiradi |
 
 Sozlamalar sahifasidagi sinovlar ("Ulanishni tekshirish", "Ovozni eshitish", talaffuzni tinglash) faqat sinov
 matnini yoki siz yozgan so'zni o'sha servisga yuboradi — dars matnini emas. Model ro'yxati tanlangan tarjima
