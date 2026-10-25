@@ -1,6 +1,6 @@
 # Privacy policy
 
-Effective date: October 25, 2026 · Version 1.0
+Effective date: October 25, 2026 · Version 1.1
 
 Sado is an extension for Chrome and Microsoft Edge. It adds Uzbek subtitles and voice-over to online course videos.
 This page explains what data Sado works with, where it is stored and who it is sent to.
@@ -45,11 +45,11 @@ The table lists every type of data Sado uses.
 
 | Data | Where it's stored | Who it's sent to | How long it's kept |
 |---|---|---|---|
-| **API key** — for the translation service (for example, Gemini) and Azure | In your browser, in extension storage | Only to the service that issued the key — with each request | Until you delete it |
+| **API key** — for the translation service (for example, Gemini) | In your browser, in extension storage | Only to the service that issued the key — with each request | Until you delete it |
 | **Lesson subtitles** — original text and translation | In your browser, in Kutubxona (the Library) | Original — to the translation service. Translation — to the speech service if voice is on | Until you delete the lesson from the Library |
 | **Lesson title and identifier** (on sites you turn on — the page address) | In the Library — to link a translation to the right lesson | No one | Until you delete the lesson from the Library |
 | **Glossary and pronunciation list** | In your browser | Included in translation requests, so terms are translated and read the way you set them | Until you delete it |
-| **Voice** — audio read by Gemini TTS or Azure | In your browser | No one: replaying a line doesn't send it to the service again | The oldest is removed when the size limit is reached |
+| **Voice** — audio read by Gemini TTS | In your browser | No one: replaying a line doesn't send it to the service again | The oldest is removed when the size limit is reached |
 | **Settings** — mode, voice, subtitle style, daily limit, consent | In your browser | No one | Until the extension is removed |
 | **Usage measurements** — today's usage, Gemini TTS count, translation and voice speed, counts for recent lessons (with the lesson identifier, no text) | In your browser | No one. Included in "Diagnostikani nusxalash" (copy diagnostics) without the lesson identifier | Reset daily or kept for the last 10 lessons; not removed when you delete a lesson from the Library |
 | **Diagnostics log** — error code, task type, time and site name (for example, udemy) | In your browser, last 50 entries | No one — unless you copy and send it yourself | Old entries are removed automatically |
@@ -75,7 +75,7 @@ terms and privacy policies, which we don't control.
 - **Google Gemini API** — translation (default) and the Gemini TTS voice.
   [Gemini API Terms](https://ai.google.dev/gemini-api/terms) ·
   [Google Privacy Policy](https://policies.google.com/privacy)
-- **Microsoft** — Edge voices and Azure Speech.
+- **Microsoft** — Edge's online Uzbek voices.
   [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
 - **Another translation service you choose** — Anthropic, OpenAI, OpenRouter or Groq. That service's terms apply.
 
@@ -102,7 +102,7 @@ Sado asks the browser for the permissions below and uses each one only for the s
 | Permission | When it's requested | Why it's needed |
 |---|---|---|
 | **Read and change data on course sites** — the sites where Sado always works (Udemy, Frontend Masters) | At install | To read lesson subtitles and show Uzbek subtitles over the video |
-| **Translation and speech service addresses** — Gemini, Anthropic, OpenAI, OpenRouter, Groq, Azure | At install | To send requests straight to the service you chose. Nothing goes to the other services |
+| **Translation and speech service addresses** — Gemini, Anthropic, OpenAI, OpenRouter, Groq | At install | To send requests straight to the service you chose. Nothing goes to the other services |
 | **Access to this site only** — for YouTube and Coursera | When you turn the site on | Same as above, but only on the site you turned on |
 | **Access to all sites** — for other course sites | When you turn on a site that isn't listed | On such sites the subtitle file is often loaded from another address. The Sado panel runs only on sites you turned on; if another tab requests something that looks like a subtitle file, its address stays only temporarily in your browser |
 | **Storage** (`storage`, `unlimitedStorage`) | At install | To keep your API key, settings, glossary and Library in your browser; the Library can grow past the usual 10 MB limit |
@@ -110,7 +110,7 @@ Sado asks the browser for the permissions below and uses each one only for the s
 | **Run scripts** (`scripting`) | At install | To start Sado on sites you turned on and in open tabs without reloading the page |
 | **Current tab** (`activeTab`) | At install | To know the current site's address when you open the Sado window, so it can offer to turn Sado on there |
 | **Side panel** (`sidePanel`) | At install | To show the lesson transcript in the browser's side panel |
-| **Offscreen document** (`offscreen`) | At install | To play the Azure voice inside the extension when the page doesn't allow audio playback |
+| **Offscreen document** (`offscreen`) | At install | To play the Gemini TTS voice inside the extension when the page doesn't allow audio playback, and to compress audio for the voice cache |
 
 To turn Sado off on a site you turned on, click «Bu saytda o'chirish» (turn off on this site) in the Sado window.
 The permission for that site is removed as well; "access to all sites" is removed when the last site turned on with
@@ -120,7 +120,7 @@ it is turned off.
 
 You can view and delete the main data in Sado's settings:
 
-- **API key** — Settings → Tarjima (Translation; for the Azure key — Ovoz, Voice) → the «O'chirish» (Delete) button
+- **API key** — Settings → Tarjima (Translation) → the «O'chirish» (Delete) button
   next to the API key.
 - **Saved lessons** — Settings → Kutubxona (Library) → a single lesson or «Hammasini o'chirish» (Delete all).
 - **Glossary** — Settings → Atamalar (Terms).
@@ -175,4 +175,6 @@ This policy is published in Uzbek, English and Russian: [O'zbekcha](PRIVACY.uz.m
 
 ### Version history
 
+- **1.1** — October 25, 2026. The Azure Speech voice was removed: Sado no longer sends anything to Azure, and a
+  previously saved Azure API key and region are deleted from your browser after the update.
 - **1.0** — October 25, 2026. Policy rewritten: summary, data and permissions tables, version number.

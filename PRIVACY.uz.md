@@ -1,6 +1,6 @@
 # Maxfiylik siyosati
 
-Kuchga kirgan sana: 2026-yil 25-oktabr · Versiya 1.0
+Kuchga kirgan sana: 2026-yil 25-oktabr · Versiya 1.1
 
 Sado — Chrome va Microsoft Edge uchun kengaytma. U onlayn kurs videolariga o'zbekcha subtitr va ovoz qo'shadi. Bu
 sahifada Sado qanday ma'lumot bilan ishlashi, uni qayerda saqlashi va kimga yuborishi yozilgan.
@@ -44,11 +44,11 @@ Sado ishlatadigan barcha ma'lumotlar quyidagi jadvalda keltirilgan.
 
 | Ma'lumot | Qayerda saqlanadi | Kimga yuboriladi | Qachongacha saqlanadi |
 |---|---|---|---|
-| **API key** — tarjima servisi (masalan, Gemini) va Azure uchun | Brauzeringizda, kengaytma xotirasida | Faqat shu keyni bergan servisga — har bir so'rov bilan birga | O'zingiz o'chirguningizcha |
+| **API key** — tarjima servisi (masalan, Gemini) uchun | Brauzeringizda, kengaytma xotirasida | Faqat shu keyni bergan servisga — har bir so'rov bilan birga | O'zingiz o'chirguningizcha |
 | **Dars subtitri** — asl matn va uning tarjimasi | Brauzeringizda, «Kutubxona» bo'limida | Asl matn — tarjima servisiga. Tarjima — ovoz yoqilgan bo'lsa, ovoz servisiga | Kutubxonadan o'chirguningizcha |
 | **Dars nomi va identifikatori** (siz yoqqan saytlarda — sahifa manzili) | Kutubxonada — tarjimani kerakli darsga bog'lash uchun | Hech kimga | Kutubxonadan o'chirguningizcha |
 | **Atamalar va talaffuz lug'ati** | Brauzeringizda | Tarjima so'rovi bilan birga tarjima servisiga — atamalar siz xohlagandek tarjima qilinishi va o'qilishi uchun | O'zingiz o'chirguningizcha |
-| **Ovoz** — Gemini TTS yoki Azure o'qigan audio | Brauzeringizda | Hech kimga: qayta eshitganda jumla servisga qayta yuborilmaydi | Hajm chegarasiga yetganda eng eskisi o'chadi |
+| **Ovoz** — Gemini TTS o'qigan audio | Brauzeringizda | Hech kimga: qayta eshitganda jumla servisga qayta yuborilmaydi | Hajm chegarasiga yetganda eng eskisi o'chadi |
 | **Sozlamalar** — rejim, ovoz, subtitr ko'rinishi, kunlik limit, rozilik | Brauzeringizda | Hech kimga | Sadoni brauzerdan o'chirib tashlaguningizcha |
 | **Ish o'lchovlari** — bugungi sarf, Gemini TTS hisobi, tarjima va ovoz tezligi, oxirgi darslar bo'yicha sanoqlar (dars identifikatori bilan, matnsiz) | Brauzeringizda | Hech kimga. «Diagnostikani nusxalash» ga dars identifikatorisiz kiradi | Har kuni yangilanadi yoki oxirgi 10 dars qoladi; kutubxonadan dars o'chirilganda o'chmaydi |
 | **Diagnostika jurnali** — xato kodi, ish turi, vaqti va sayt nomi (masalan, udemy) | Brauzeringizda, oxirgi 50 ta yozuv | Hech kimga. Uni faqat o'zingiz nusxalab yuborishingiz mumkin | Eski yozuvlar o'z-o'zidan o'chadi |
@@ -74,7 +74,7 @@ siyosatiga ko'ra qayta ishlaydi. Biz bu jarayonni nazorat qila olmaymiz.
 - **Google Gemini API** — tarjima (odatiy servis) va Gemini TTS ovozi.
   [Gemini API shartlari](https://ai.google.dev/gemini-api/terms) ·
   [Google maxfiylik siyosati](https://policies.google.com/privacy)
-- **Microsoft** — Edge ovozlari va Azure Speech.
+- **Microsoft** — Edge'ning onlayn o'zbek ovozlari.
   [Microsoft maxfiylik bayonoti](https://privacy.microsoft.com/privacystatement)
 - **Boshqa tarjima servislari** — Anthropic, OpenAI, OpenRouter yoki Groq. Ulardan birini tanlasangiz, o'sha
   servisning shartlari amal qiladi.
@@ -102,7 +102,7 @@ Sado brauzerdan quyidagi ruxsatlarni so'raydi va ularni faqat ko'rsatilgan maqsa
 | Ruxsat | Qachon so'raladi | Nima uchun kerak |
 |---|---|---|
 | **Kurs saytlaridagi ma'lumotni o'qish va o'zgartirish** — Sado doim ishlaydigan saytlar (Udemy, Frontend Masters) uchun | O'rnatish paytida | Dars subtitrini o'qish va video ustida o'zbekcha subtitrni ko'rsatish |
-| **Tarjima va ovoz servislari manzillari** — Gemini, Anthropic, OpenAI, OpenRouter, Groq, Azure | O'rnatish paytida | So'rovni siz tanlagan servisga to'g'ridan-to'g'ri yuborish. Boshqa servislarga hech narsa ketmaydi |
+| **Tarjima va ovoz servislari manzillari** — Gemini, Anthropic, OpenAI, OpenRouter, Groq | O'rnatish paytida | So'rovni siz tanlagan servisga to'g'ridan-to'g'ri yuborish. Boshqa servislarga hech narsa ketmaydi |
 | **Faqat shu saytga ruxsat** — YouTube va Coursera uchun | Shu saytni yoqqaningizda | Yuqoridagi bilan bir xil, lekin faqat siz yoqqan saytda |
 | **Barcha saytlarga ruxsat** — boshqa kurs saytlari uchun | Ro'yxatda yo'q saytni yoqqaningizda | Bunday saytlarda subtitr fayli ko'pincha boshqa manzildan yuklanadi. Sado paneli faqat siz yoqqan saytlarda ishlaydi; boshqa varaqda subtitrga o'xshash so'rov manzili ko'rilsa, u faqat vaqtincha brauzerda qoladi |
 | **Xotira** (`storage`, `unlimitedStorage`) | O'rnatish paytida | API key, sozlamalar, atamalar va kutubxonani brauzeringizda saqlash; kutubxona odatiy 10 MB chegaradan katta bo'lishi mumkin |
@@ -110,7 +110,7 @@ Sado brauzerdan quyidagi ruxsatlarni so'raydi va ularni faqat ko'rsatilgan maqsa
 | **Skript qo'shish** (`scripting`) | O'rnatish paytida | Siz yoqqan saytda va ochiq varaqlarda Sadoni sahifani yangilamasdan ishga tushirish |
 | **Joriy varaq** (`activeTab`) | O'rnatish paytida | Sado oynasi ochilganda joriy sayt manzilini bilish — shu saytda yoqishni taklif qilish uchun |
 | **Yon panel** (`sidePanel`) | O'rnatish paytida | Darsning matnini brauzer yon panelida ko'rsatish |
-| **Fon hujjati** (`offscreen`) | O'rnatish paytida | Sahifa audio ijroga ruxsat bermaganda Azure ovozini kengaytmaning o'zida ijro etish |
+| **Fon hujjati** (`offscreen`) | O'rnatish paytida | Sahifa audio ijroga ruxsat bermaganda Gemini TTS ovozini kengaytmaning o'zida ijro etish va ovoz keshi uchun audioni siqish |
 
 Siz yoqqan saytda Sadoni o'chirish uchun Sado oynasida «Bu saytda o'chirish» tugmasini bosing. Shu sayt uchun
 berilgan ruxsat ham bekor qilinadi; «Barcha saytlarga ruxsat» esa u bilan yoqilgan oxirgi sayt o'chirilganda
@@ -120,7 +120,7 @@ qaytariladi.
 
 Asosiy ma'lumotlarni Sado sozlamalarida ko'rishingiz va o'chirishingiz mumkin:
 
-- **API key** — Sozlamalar → Tarjima (Azure keyi uchun — Ovoz) → API key yonidagi «O'chirish» tugmasi.
+- **API key** — Sozlamalar → Tarjima → API key yonidagi «O'chirish» tugmasi.
 - **Saqlangan darslar** — Sozlamalar → Kutubxona → bitta dars yoki «Hammasini o'chirish».
 - **Atamalar** — Sozlamalar → Atamalar.
 - **Rozilik** — Sozlamalar → Maxfiylik → «Rozilikni qaytarib olish».
@@ -177,4 +177,6 @@ Bu siyosat o'zbek, ingliz va rus tillarida e'lon qilingan: [O'zbekcha](PRIVACY.u
 
 ### Versiyalar tarixi
 
+- **1.1** — 2026-yil 25-oktabr. Azure Speech ovozi olib tashlandi: Sado endi Azure'ga hech narsa yubormaydi,
+  avval saqlangan Azure API keyi va hududi yangilanishdan keyin brauzeringizdan o'chiriladi.
 - **1.0** — 2026-yil 25-oktabr. Siyosat qayta yozildi: qisqacha, ma'lumotlar va ruxsatlar jadvali, versiya raqami.
