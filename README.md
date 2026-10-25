@@ -2,14 +2,14 @@
 
 [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/gjpapdekmcjbifpelcdplpoiocmgmknc) · [Chrome Web Store](https://chromewebstore.google.com/detail/mmjajpodjkpgnaekkonbdjkpecogidal)
 
-Inglizcha kurs videolariga o'zbekcha subtitr (o'z API keyingiz bilan); ovoz — Chrome'da Gemini, Edge'da o'z ovozi yoki Azure bilan.
+Udemy, Coursera, Frontend Masters va YouTube darslariga o'zbekcha subtitr va ovoz. O'z API keyingiz bilan, serversiz.
 
-[Sado — maxfiylik siyosati](PRIVACY.uz.md)
+[Maxfiylik siyosati](PRIVACY.uz.md)
 
-Uzbek subtitles for English course videos via your own AI key; Uzbek voice with Gemini (Chrome), Edge voices or Azure.
+Uzbek subtitles and voice-over for Udemy, Coursera, Frontend Masters and YouTube lessons. Uses your own API key; no server.
 
-[Sado — Privacy Policy](PRIVACY.en.md)
+[Privacy policy](PRIVACY.en.md)
 
-Узбекские субтитры к англоязычным видеокурсам через ваш AI-ключ; узбекская озвучка — Gemini (Chrome), Edge или Azure.
+Субтитры и озвучка на узбекском для уроков Udemy, Coursera, Frontend Masters и YouTube. С вашим API-ключом, без сервера.
 
-[Sado — политика конфиденциальности](PRIVACY.ru.md)
+[Политика конфиденциальности](PRIVACY.ru.md)

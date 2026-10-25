@@ -1,130 +1,178 @@
-# Sado — Privacy Policy
+# Privacy policy
 
-Last updated: October 24, 2026. Other languages: [O'zbekcha](PRIVACY.uz.md), [Русский](PRIVACY.ru.md).
+Effective date: October 25, 2026 · Version 1.0
 
-Sado is a browser extension that translates the English subtitles of course videos into Uzbek and shows them as
-Uzbek subtitles over the video or reads them aloud in Uzbek in sync with the video.
+Sado is an extension for Chrome and Microsoft Edge. It adds Uzbek subtitles and voice-over to online course videos.
+This page explains what data Sado works with, where it is stored and who it is sent to.
 
-## Summary
+## In short
 
-- Sado contains no analytics, telemetry, advertising or tracking code. The author runs no server: Sado sends
-  nothing to us.
-- Data goes only to the services listed below that you choose — and only after you agree when setting up the
-  translation service.
-- Your API keys, settings and translation cache are stored only in this browser profile.
+- **Sado has no server.** Your data never reaches us: we don't collect or store it. You don't need to sign up
+  either.
+- **Everything stays in your browser.** Your API key, settings, glossary and saved lessons stay in this browser
+  only. You can delete them at any time.
+- **Text is sent only with your consent.** For translation, the lesson subtitles go to the service you choose
+  (usually Google Gemini); for voice-over, the translated text goes to a speech service. This starts only after
+  you click «Roziman» ("I agree").
+- **No ads, no tracking.** Sado uses no analytics, cookies or ads. Your data is never sold and is used only for
+  translation and voice-over.
 
-## Who receives what
+## 1. Who we are
 
-| Recipient | When | What is sent |
+Sado is developed and maintained by Shakhzod Namazbaev ("we"). This policy applies to the Sado extension in the
+Chrome Web Store and Microsoft Edge Add-ons.
+
+If you have questions, write to [namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com).
+
+## 2. How Sado works
+
+When you open a lesson on a course site, Sado takes the lesson's original subtitles (usually English) from that
+site itself — from the subtitle file the page loads or, on Udemy, from the site's own API, just as the page does.
+It then sends the subtitles to the translation service. The translation appears over the video as Uzbek subtitles.
+In voice mode, a speech service reads the translation aloud.
+
+Requests go straight from your browser to the service, with the API key you entered. There is no Sado server in
+between, so this data never reaches us.
+
+If a lesson was translated before, Sado takes the translation from the Library and sends nothing to the service.
+The tests in Settings ("Ulanishni tekshirish" — check connection, "Ovozni eshitish" — hear the voice, the pronunciation
+preview) send only a sample sentence or a word you typed, not lesson text; the model list request contains no text at
+all.
+
+## 3. What data Sado handles
+
+The table lists every type of data Sado uses.
+
+| Data | Where it's stored | Who it's sent to | How long it's kept |
+|---|---|---|---|
+| **API key** — for the translation service (for example, Gemini) and Azure | In your browser, in extension storage | Only to the service that issued the key — with each request | Until you delete it |
+| **Lesson subtitles** — original text and translation | In your browser, in Kutubxona (the Library) | Original — to the translation service. Translation — to the speech service if voice is on | Until you delete the lesson from the Library |
+| **Lesson title and identifier** (on sites you turn on — the page address) | In the Library — to link a translation to the right lesson | No one | Until you delete the lesson from the Library |
+| **Glossary and pronunciation list** | In your browser | Included in translation requests, so terms are translated and read the way you set them | Until you delete it |
+| **Voice** — audio read by Gemini TTS or Azure | In your browser | No one: replaying a line doesn't send it to the service again | The oldest is removed when the size limit is reached |
+| **Settings** — mode, voice, subtitle style, daily limit, consent | In your browser | No one | Until the extension is removed |
+| **Usage measurements** — today's usage, Gemini TTS count, translation and voice speed, counts for recent lessons (with the lesson identifier, no text) | In your browser | No one. Included in "Diagnostikani nusxalash" (copy diagnostics) without the lesson identifier | Reset daily or kept for the last 10 lessons; not removed when you delete a lesson from the Library |
+| **Diagnostics log** — error code, task type, time and site name (for example, udemy) | In your browser, last 50 entries | No one — unless you copy and send it yourself | Old entries are removed automatically |
+| **Subtitle file address** — the subtitle file a page requested and that page's address | In your browser, temporarily | No one | Until the tab or browser is closed |
+
+The diagnostics log and usage measurements never contain your API key or lesson text. The Gemini TTS count stores
+a short one-way fingerprint of the key, not the key itself.
+
+## 4. What we don't collect
+
+- **Personal details** — your name, email and the like. Sado has no accounts.
+- **Browsing history.** Sado doesn't keep your browsing history. It reads page content only on course sites and
+  sites you turn on.
+- **Video or audio.** Sado doesn't record the video or send it anywhere.
+- **Payment details or location.**
+- **Usage statistics.** Sado uses no analytics, cookies, ads or tracking tools.
+
+## 5. Third-party services
+
+For translation and voice-over, Sado works with the services below. They process the text you send under their own
+terms and privacy policies, which we don't control.
+
+- **Google Gemini API** — translation (default) and the Gemini TTS voice.
+  [Gemini API Terms](https://ai.google.dev/gemini-api/terms) ·
+  [Google Privacy Policy](https://policies.google.com/privacy)
+- **Microsoft** — Edge voices and Azure Speech.
+  [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
+- **Another translation service you choose** — Anthropic, OpenAI, OpenRouter or Groq. That service's terms apply.
+
+> **About the Gemini API free tier.** On the free tier, Google uses the text you send to improve its products, and
+> people may review it. Don't use the free tier for lessons that contain confidential or personal information. Paid
+> tiers have different terms — see Google's terms for details.
+
+## 6. Consent
+
+Before sending any text to a service for the first time, Sado shows what will be sent and where, and asks for your
+consent. Nothing is sent until you click «Roziman» ("I agree"). Consent covers the selected service: if you switch to
+another one, Sado asks again.
+
+If the list of services or this policy changes significantly, Sado asks for consent again.
+
+You can stop sending at any time: turn off subtitles and voice, or click «Rozilikni qaytarib olish» (withdraw
+consent) in Settings → Maxfiylik (Privacy). After that nothing is sent, and translation and voice stop at once in open
+lessons.
+
+## 7. Browser permissions
+
+Sado asks the browser for the permissions below and uses each one only for the stated purpose.
+
+| Permission | When it's requested | Why it's needed |
 |---|---|---|
-| The **one** translation service you select in the settings: Google (Gemini API), Anthropic, OpenAI, OpenRouter or Groq | When a lesson is translated | The English subtitle text of the current lesson (sentences and their neighbouring sentences), the terms from your glossary that must stay unchanged, a list of technical terms whose pronunciation is learned, and the model name. The request goes directly to the service's API with your API key |
-| Microsoft — the Edge browser's online voices ("Online (Natural)": Sardor, Madina) | When an online Uzbek voice in Edge reads the dub | The Uzbek translated sentences. Edge sends them to Microsoft's cloud service to be spoken |
-| Google — Gemini TTS (model `gemini-3.8-flash-lite-tts`) | Only if the browser has no Uzbek voice (for example Google Chrome) and the selected translation service is Google (Gemini) | The Uzbek translated sentences (several per request), with the same Gemini API key, to `generativelanguage.googleapis.com`. Not used in Edge, where the browser has an Uzbek voice, and not used with other translation services |
-| Microsoft — Azure Speech | Only if "Azure" is selected as the voice engine | The Uzbek translated sentences, with your Azure key, to `<region>.tts.speech.microsoft.com` |
-| The lesson site (Udemy, master.dev or a site you enabled) | When subtitles are loaded | On Udemy, first a request to Udemy's own API on the same site, with your Udemy session as the lesson page itself does, for the current lesson's title and list of subtitle files. Then the extension downloads from that site, without cookies, a subtitle file Udemy listed for the lesson or the lesson page itself requested. On YouTube (a site you enabled) it downloads, without cookies, the English track of the captions request the YouTube player itself made; if CC is off, the extension turns CC on for that request and then off again |
+| **Read and change data on course sites** — the sites where Sado always works (Udemy, Frontend Masters) | At install | To read lesson subtitles and show Uzbek subtitles over the video |
+| **Translation and speech service addresses** — Gemini, Anthropic, OpenAI, OpenRouter, Groq, Azure | At install | To send requests straight to the service you chose. Nothing goes to the other services |
+| **Access to this site only** — for YouTube and Coursera | When you turn the site on | Same as above, but only on the site you turned on |
+| **Access to all sites** — for other course sites | When you turn on a site that isn't listed | On such sites the subtitle file is often loaded from another address. The Sado panel runs only on sites you turned on; if another tab requests something that looks like a subtitle file, its address stays only temporarily in your browser |
+| **Storage** (`storage`, `unlimitedStorage`) | At install | To keep your API key, settings, glossary and Library in your browser; the Library can grow past the usual 10 MB limit |
+| **Observe network requests** (`webRequest`) | At install | To find the subtitle file the lesson page loads. Requests are never blocked or changed |
+| **Run scripts** (`scripting`) | At install | To start Sado on sites you turned on and in open tabs without reloading the page |
+| **Current tab** (`activeTab`) | At install | To know the current site's address when you open the Sado window, so it can offer to turn Sado on there |
+| **Side panel** (`sidePanel`) | At install | To show the lesson transcript in the browser's side panel |
+| **Offscreen document** (`offscreen`) | At install | To play the Azure voice inside the extension when the page doesn't allow audio playback |
 
-The tests on the settings page ("Ulanishni tekshirish" — test connection, "Ovozni eshitish" — play voice sample, and
-listening to a pronunciation) send only the test text or the word you typed to that service — never lesson text.
-The model list is requested from the selected translation service with your saved key; that request contains no
-text.
+To turn Sado off on a site you turned on, click «Bu saytda o'chirish» (turn off on this site) in the Sado window.
+The permission for that site is removed as well; "access to all sites" is removed when the last site turned on with
+it is turned off.
 
-Each service processes the data it receives under its own terms and privacy policy.
+## 8. Viewing and deleting your data
 
-**Gemini free tier.** On the free tier Google may use the text you send (both for translation and for Gemini TTS) to improve its products. The Gemini API
-may be used only by people aged 18 or over. Details: [Gemini API Additional Terms of Service](https://ai.google.dev/gemini-api/terms).
-If you do not want this, choose a paid tier that does not use your data for training, or another service.
+You can view and delete the main data in Sado's settings:
 
-## Consent
+- **API key** — Settings → Tarjima (Translation; for the Azure key — Ovoz, Voice) → the «O'chirish» (Delete) button
+  next to the API key.
+- **Saved lessons** — Settings → Kutubxona (Library) → a single lesson or «Hammasini o'chirish» (Delete all).
+- **Glossary** — Settings → Atamalar (Terms).
+- **Consent** — Settings → Maxfiylik (Privacy) → «Rozilikni qaytarib olish» (withdraw consent).
+- **Everything at once** — remove Sado from your browser. The browser deletes everything Sado stored. It then opens
+  a short feedback page on GitHub; nothing is added to its address.
 
-Consent is given when you set up the translation service: directly above the "Roziman — saqlash va tekshirish"
-(I agree — save and test) button, the welcome page and the settings page say that the lesson subtitles go to the
-selected service and the Uzbek text goes to Microsoft for the voice or, if the browser has no Uzbek voice and the service is Gemini, to Google. The consent covers only the selected service:
-if you switch to another one, it is asked again. If consent is missing (for example after switching the service
-or when the list of recipients changes), the panel shows a short prompt with a "Roziman" (I agree) button; until
-you press it, nothing is sent. The full list (recipients, what stays on the device, the Gemini notice) is in the
-"Maxfiylik" (Privacy) section of the settings page. The consent (version, service and date) is stored on this
-device. You can withdraw it at any time: Settings → "Maxfiylik" → "Rozilikni qaytarib olish" (Withdraw consent).
-After that no lesson text is sent anywhere, and translation and voice stop at once in open lessons.
+The voice cache, usage measurements and diagnostics log have no separate delete button: they expire on their own at
+their size or count limits and are not removed when you delete a lesson from the Library. All of them are deleted when
+you remove Sado from your browser.
 
-## What is stored on your device
+Text sent to the services is kept under their own rules. To delete it, contact that service.
 
-In the browser's extension storage (`chrome.storage.local`), in this browser profile only. Nothing is synced to
-other devices.
+## 9. Security
 
-- **API keys** (translation service, Azure) — in the extension's background part. Neither the web page nor the
-  extension's script on the page can read them.
-- **Settings** — selected service and model, voice engine and selected voice, Azure region, the panel mode
-  (Off / Subtitles / Voice) and subtitle display options, the consent record, the daily token limit you set.
-- **Dictionaries** — the terms and pronunciations you wrote, and term pronunciations learned from the translation
-  service.
-- **Translation cache** — per lesson: the lesson identifier (on sites you enabled, the page address) and title, the
-  English subtitle text, the Uzbek translation, timings and which model translated it. The cache means you do not
-  pay the service again when you reopen that lesson.
-- **Voice audio cache** — in the extension's IndexedDB: the audio synthesised by Azure or Gemini TTS, so a
-  replay does not send the sentences again.
-- **Gemini TTS daily counter** — today's date, the number of voice requests sent that day and whether the limit was
-  reached, plus a one-way fingerprint of the API key (a SHA-256 prefix, not the key itself). The panel uses it to
-  show how much voice is left; the record is replaced every day and is never sent anywhere.
-- **Diagnostics log** — the code of the last 50 errors (for example `auth`, `timeout`), the kind of work
-  (translation, subtitles, voice, model list), time, duration and count, and for a subtitle error the site (for
-  example `udemy`; not the page address). Subtitle text, translations and keys are
-  never written to it. The log is never sent anywhere by itself: Settings → "Yordam" (Help) → "Diagnostikani
-  nusxalash" (Copy diagnostics) copies it together with the extension version, browser name, service and model name
-  and voice status, and you decide whom to send it to. "Telegram'da xabar berish" (Report on Telegram) also only
-  copies it and opens the developer's Telegram page: you write and send the message yourself.
-- **Model speed** — for each of the last 20 service and model pairs: the average number of output tokens per second,
-  the number of measurements and the time of the last one. No text is stored. It is included in "Copy diagnostics"
-  (without the time) and is never sent anywhere by itself.
-- **Daily usage** — today's date, the number of requests the service answered that day (translation and Gemini
-  TTS) and the tokens they used. Sado uses it to stop at the daily limit you set and shows today's total under the
-  limit field; the record is replaced every day and is never sent anywhere.
-- **Voice sync** — for each of the last 10 lessons: the site, the lesson identifier, the voice engine and how well
-  the voice kept up with the video (longest delay, seconds slowed down, pauses, sentences spoken and skipped). No
-  text is stored. It is included in "Copy diagnostics" without the lesson identifier and is never sent anywhere by
-  itself.
-- **Translation stats** — for each of the last 10 lessons (a lesson translated again with another model gets its own
-  entry): the site, the lesson identifier, the service and model, how many sentences were translated, how many
-  requests were answered and the tokens they used (including thinking and cached tokens), how many requests were
-  repeated, split, refused or cut off at the output limit, and how many translations did not fit the sentence's time,
-  stayed in English or contained non-Latin letters. No text is stored. It is included in "Copy
-  diagnostics" without the lesson identifier and is never sent anywhere by itself.
-- **Voice timing** — for each of the last 10 voices used: the measured speech rate and start delay, so the voice
-  fits each sentence's time. No text is stored.
-- **Update marker** — the version Sado was updated to (only the version number): the popup shows a short "Sado
-  yangilandi" (Sado updated) list, and the record is removed when "Tushunarli" (Got it) is clicked.
+- All requests are sent over an encrypted HTTPS connection.
+- Your API key is kept in extension storage — websites can't read it. It isn't protected by a separate password,
+  though: anyone with access to your browser profile on this computer could see it. If you used a shared computer,
+  delete the API key when you're done.
+- Never share your API key. If it leaks, delete it on that service's website (for Gemini — Google AI Studio) and
+  create a new one.
 
-Temporarily (`chrome.storage.session`, cleared when the browser closes): the address, type and requesting page of
-subtitle files requested by the lesson page and of requests that help locate the subtitle address (for example
-master.dev lesson data) — at most 50 per tab. A tab's entries are deleted when the tab closes. The extension stores
-no other requests and never blocks or modifies any request.
+## 10. Children
 
-## How to delete it
+Sado is not intended for anyone under 18: under the Gemini API terms, only people aged 18 or older may use it. We
+don't collect personal data from anyone, including children.
 
-- **Translation cache:** Settings → "Kutubxona" (Library) → a lesson's delete button (one lesson) or
-  "Hammasini o'chirish" (Delete all).
-- **Translation service key:** Settings → "Tarjima" (Translation) → "API key" → "O'chirish" (Delete).
-- **Everything** (including the Azure key, dictionaries, learned pronunciations and consent): remove the extension
-  from the browser — the browser deletes all of its local data as well. The browser then opens a short
-  [feedback page](https://github.com/namazbaev/sado/blob/main/FEEDBACK.md) in the public repository (it asks on Telegram what went wrong). Nothing is added to its
-  address; GitHub serves it like any other page.
-- Data held by the services is deleted according to that service's policy.
+## 11. Chrome Web Store requirements
 
-## No selling, no transfer
+Sado's use of data complies with the Chrome Web Store User Data Policy, including the
+[Limited Use](https://developer.chrome.com/docs/webstore/program-policies/limited-use/) requirements. This means
+data is used only for Sado's single purpose — translating lessons and reading them aloud. It is never sold, never
+used for advertising and never used to determine creditworthiness.
 
-Sado does not sell data, does not use it for advertising and does not give it to anyone other than the services
-named above that you chose. Data is used only for the extension's single purpose — translating and voicing
-subtitles. Sado complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.
+## 12. Changes to this policy
 
-## Children
+If this policy changes, the new text appears on this page with a new date and version number. If the change is
+significant (for example, a new service is added), Sado tells you in the extension and asks for your consent again.
+Previous versions are listed at the end of the page.
 
-Sado is not directed at children under 13. Using the Gemini API requires being 18 or older.
+## 13. Contact
 
-## Changes
+For privacy questions, suggestions or data deletion requests, write to
+[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com) or on Telegram at
+[t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev). Please include your Sado version: Settings → Yordam
+(Help) → «Diagnostikani nusxalash» (copy diagnostics) adds it for you.
 
-If this policy changes, this document is updated. If the list of recipients changes, the extension asks for
-consent again before the first request to a new recipient.
+---
 
-## Contact
+This policy is published in Uzbek, English and Russian: [O'zbekcha](PRIVACY.uz.md) · [English](PRIVACY.en.md) ·
+[Русский](PRIVACY.ru.md). If the versions differ, the Uzbek text prevails.
 
-Telegram: [t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev) · Email:
-[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com)
+### Version history
+
+- **1.0** — October 25, 2026. Policy rewritten: summary, data and permissions tables, version number.

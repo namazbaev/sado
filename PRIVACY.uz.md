@@ -1,128 +1,180 @@
-# Sado — maxfiylik siyosati
+# Maxfiylik siyosati
 
-Oxirgi yangilanish: 2026-yil 24-oktabr. Boshqa tillarda: [English](PRIVACY.en.md), [Русский](PRIVACY.ru.md).
+Kuchga kirgan sana: 2026-yil 25-oktabr · Versiya 1.0
 
-Sado — kurs videolarining inglizcha subtitrini o'zbekchaga tarjima qilib, video ustida o'zbekcha subtitr sifatida
-ko'rsatadigan yoki video bilan sinxron o'zbekcha ovozda o'qib beradigan brauzer kengaytmasi.
+Sado — Chrome va Microsoft Edge uchun kengaytma. U onlayn kurs videolariga o'zbekcha subtitr va ovoz qo'shadi. Bu
+sahifada Sado qanday ma'lumot bilan ishlashi, uni qayerda saqlashi va kimga yuborishi yozilgan.
 
 ## Qisqacha
 
-- Sado'da analitika, telemetriya, reklama yoki kuzatuv kodi yo'q. Kengaytma muallifining serveri yo'q: Sado
-  bizga hech qanday ma'lumot yubormaydi.
-- Ma'lumot faqat quyidagi jadvaldagi, siz o'zingiz tanlagan servislarga ketadi — va faqat tarjima servisini
-  sozlashda rozilik berganingizdan keyin.
-- API keylaringiz, sozlamalar va tarjima keshi faqat shu brauzer profilida saqlanadi.
+- **Sadoning serveri yo'q.** Ma'lumotlaringiz bizga kelmaydi: biz ularni yig'maymiz va saqlamaymiz. Ro'yxatdan
+  o'tish ham shart emas.
+- **Hammasi brauzeringizda saqlanadi.** API key, sozlamalar, atamalar va saqlangan darslar faqat shu brauzerda
+  turadi. Ularni istalgan vaqtda o'chirishingiz mumkin.
+- **Matn faqat roziligingiz bilan yuboriladi.** Tarjima uchun dars subtitri siz tanlagan servisga (odatda Google
+  Gemini), ovoz uchun esa tarjima matni ovoz servisiga yuboriladi. Bu siz «Roziman» tugmasini bosganingizdan
+  keyingina boshlanadi.
+- **Reklama va kuzatuv yo'q.** Sado analitika, cookie va reklama ishlatmaydi. Ma'lumotlaringiz sotilmaydi va faqat
+  tarjima hamda ovoz uchun ishlatiladi.
 
-## Kimga nima yuboriladi
+## 1. Biz kimmiz
 
-| Oluvchi | Qachon | Nima yuboriladi |
+Sadoni Shakhzod Namazbaev ishlab chiqadi va qo'llab-quvvatlaydi (quyida — «biz»). Bu siyosat Chrome Web Store va
+Microsoft Edge Add-ons do'konlaridagi Sado kengaytmasiga tegishli.
+
+Savollaringiz bo'lsa, [namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com) manziliga yozing.
+
+## 2. Sado qanday ishlaydi
+
+Kurs saytida dars ochilganda Sado darsning asl subtitrini (odatda inglizcha) o'sha saytning o'zidan oladi —
+sahifa yuklagan subtitr faylidan yoki, Udemy'da, saytning o'z API'sidan, sahifaning o'zi kabi. Keyin subtitrni
+tarjima servisiga yuboradi. Tarjima video ustida o'zbekcha subtitr bo'lib chiqadi. Ovoz rejimida tarjimani ovoz
+servisi o'qib beradi.
+
+So'rovlar brauzeringizdan to'g'ridan-to'g'ri servisga boradi va siz kiritgan API key bilan yuboriladi. Oraliqda
+Sado serveri yo'q, shuning uchun bu ma'lumotlar bizga kelmaydi.
+
+Dars avval tarjima qilingan bo'lsa, Sado tarjimani kutubxonadan oladi va servisga hech narsa yubormaydi.
+Sozlamalardagi sinovlar («Ulanishni tekshirish», «Ovozni eshitish», talaffuzni tinglash) dars matnini emas, faqat
+namuna jumlani yoki siz yozgan so'zni yuboradi; modellar ro'yxati so'rovida esa matn umuman yo'q.
+
+## 3. Sado qanday ma'lumot bilan ishlaydi
+
+Sado ishlatadigan barcha ma'lumotlar quyidagi jadvalda keltirilgan.
+
+| Ma'lumot | Qayerda saqlanadi | Kimga yuboriladi | Qachongacha saqlanadi |
+|---|---|---|---|
+| **API key** — tarjima servisi (masalan, Gemini) va Azure uchun | Brauzeringizda, kengaytma xotirasida | Faqat shu keyni bergan servisga — har bir so'rov bilan birga | O'zingiz o'chirguningizcha |
+| **Dars subtitri** — asl matn va uning tarjimasi | Brauzeringizda, «Kutubxona» bo'limida | Asl matn — tarjima servisiga. Tarjima — ovoz yoqilgan bo'lsa, ovoz servisiga | Kutubxonadan o'chirguningizcha |
+| **Dars nomi va identifikatori** (siz yoqqan saytlarda — sahifa manzili) | Kutubxonada — tarjimani kerakli darsga bog'lash uchun | Hech kimga | Kutubxonadan o'chirguningizcha |
+| **Atamalar va talaffuz lug'ati** | Brauzeringizda | Tarjima so'rovi bilan birga tarjima servisiga — atamalar siz xohlagandek tarjima qilinishi va o'qilishi uchun | O'zingiz o'chirguningizcha |
+| **Ovoz** — Gemini TTS yoki Azure o'qigan audio | Brauzeringizda | Hech kimga: qayta eshitganda jumla servisga qayta yuborilmaydi | Hajm chegarasiga yetganda eng eskisi o'chadi |
+| **Sozlamalar** — rejim, ovoz, subtitr ko'rinishi, kunlik limit, rozilik | Brauzeringizda | Hech kimga | Sadoni brauzerdan o'chirib tashlaguningizcha |
+| **Ish o'lchovlari** — bugungi sarf, Gemini TTS hisobi, tarjima va ovoz tezligi, oxirgi darslar bo'yicha sanoqlar (dars identifikatori bilan, matnsiz) | Brauzeringizda | Hech kimga. «Diagnostikani nusxalash» ga dars identifikatorisiz kiradi | Har kuni yangilanadi yoki oxirgi 10 dars qoladi; kutubxonadan dars o'chirilganda o'chmaydi |
+| **Diagnostika jurnali** — xato kodi, ish turi, vaqti va sayt nomi (masalan, udemy) | Brauzeringizda, oxirgi 50 ta yozuv | Hech kimga. Uni faqat o'zingiz nusxalab yuborishingiz mumkin | Eski yozuvlar o'z-o'zidan o'chadi |
+| **Subtitr fayli manzili** — sahifa so'ragan subtitr fayli va o'sha sahifa manzili | Brauzeringizda, vaqtinchalik | Hech kimga | Varaq yoki brauzer yopilguncha |
+
+Diagnostika jurnali va ish o'lchovlariga API key va dars matni yozilmaydi. Gemini TTS hisobi keyning o'zini emas,
+undan olingan qaytarib bo'lmaydigan qisqa barmoq izini saqlaydi.
+
+## 4. Biz nimani yig'maymiz
+
+- **Shaxsiy ma'lumotlar** — ism, e-pochta va boshqalar. Sadoda akkaunt yo'q.
+- **Brauzer tarixi.** Sado brauzer tarixini saqlamaydi. Sahifa mazmunini faqat kurs saytlarida va siz yoqqan
+  saytlarda o'qiydi.
+- **Video va audio.** Sado videoni yozib olmaydi va hech qayerga yubormaydi.
+- **To'lov ma'lumotlari va joylashuv.**
+- **Foydalanish statistikasi.** Sado analitika, cookie, reklama va kuzatuv vositalarini ishlatmaydi.
+
+## 5. Uchinchi tomon servislari
+
+Tarjima va ovoz uchun Sado quyidagi servislardan foydalanadi. Ular yuborilgan matnni o'z shartlari va maxfiylik
+siyosatiga ko'ra qayta ishlaydi. Biz bu jarayonni nazorat qila olmaymiz.
+
+- **Google Gemini API** — tarjima (odatiy servis) va Gemini TTS ovozi.
+  [Gemini API shartlari](https://ai.google.dev/gemini-api/terms) ·
+  [Google maxfiylik siyosati](https://policies.google.com/privacy)
+- **Microsoft** — Edge ovozlari va Azure Speech.
+  [Microsoft maxfiylik bayonoti](https://privacy.microsoft.com/privacystatement)
+- **Boshqa tarjima servislari** — Anthropic, OpenAI, OpenRouter yoki Groq. Ulardan birini tanlasangiz, o'sha
+  servisning shartlari amal qiladi.
+
+> **Gemini API bepul tarifi haqida.** Bepul tarifda Google yuborilgan matndan o'z mahsulotlarini yaxshilash uchun
+> foydalanadi. Bu matnni tekshiruvchi odamlar ham o'qishi mumkin. Shuning uchun maxfiy yoki shaxsiy ma'lumot bor
+> darslarda bepul tarifdan foydalanmang. Pullik tarifda shartlar boshqacha — batafsil Google shartlarida.
+
+## 6. Rozilik
+
+Sado biror matnni servisga birinchi marta yuborishdan oldin nima va qayerga yuborilishini ko'rsatadi va
+roziligingizni so'raydi. Siz «Roziman» tugmasini bosmaguningizcha hech narsa yuborilmaydi. Rozilik tanlangan
+servisga tegishli: boshqa servisga o'tsangiz, qayta so'raladi.
+
+Servislar ro'yxati yoki bu siyosat muhim tarzda o'zgarsa, Sado roziligingizni qayta so'raydi.
+
+Yuborishni istalgan vaqtda to'xtatishingiz mumkin: subtitr va ovozni o'chiring yoki Sozlamalar → Maxfiylik →
+«Rozilikni qaytarib olish» tugmasini bosing. Shundan keyin hech narsa yuborilmaydi, ochiq darslarda tarjima va ovoz
+darhol to'xtaydi.
+
+## 7. Brauzer ruxsatlari
+
+Sado brauzerdan quyidagi ruxsatlarni so'raydi va ularni faqat ko'rsatilgan maqsadda ishlatadi.
+
+| Ruxsat | Qachon so'raladi | Nima uchun kerak |
 |---|---|---|
-| Siz sozlamada tanlagan **bitta** tarjima servisi: Google (Gemini API), Anthropic, OpenAI, OpenRouter yoki Groq | Dars tarjima qilinganda | Joriy darsning inglizcha subtitr matni (jumlalar va ularning qo'shni jumlalari), lug'atingizdagi o'zgarmas qoladigan atamalar, talaffuzi o'rganiladigan texnik atamalar ro'yxati va model nomi. So'rov servis API'siga to'g'ridan-to'g'ri, sizning API keyingiz bilan ketadi |
-| Microsoft — Edge brauzerining onlayn ovozlari ("Online (Natural)": Sardor, Madina) | Edge'da onlayn o'zbek ovozi dublyaj qilganda | O'zbekcha tarjima jumlalari. Edge ularni o'qish uchun Microsoft'ning bulut servisiga yuboradi |
-| Google — Gemini TTS (model `gemini-3.8-flash-lite-tts`) | Brauzerda o'zbek ovozi bo'lmasa (masalan Google Chrome) va tanlangan tarjima servisi Google (Gemini) bo'lsa | O'zbekcha tarjima jumlalari (bir so'rovda bir nechta), o'sha Gemini API keyingiz bilan `generativelanguage.googleapis.com` manziliga. Brauzerda o'zbek ovozi bor Edge'da va boshqa tarjima servislari bilan ishlatilmaydi |
-| Microsoft — Azure Speech | Sozlamada ovoz dvigateli "Azure" tanlangan bo'lsa | O'zbekcha tarjima jumlalari, sizning Azure API keyingiz bilan `<hudud>.tts.speech.microsoft.com` manziliga |
-| Dars sayti (Udemy, master.dev yoki siz yoqqan sayt) | Subtitr yuklanganda | Udemy'da avval Udemy'ning o'z API'siga shu saytda, dars sahifasining o'zi kabi Udemy sessiyangiz bilan so'rov ketadi: joriy darsning nomi va subtitr fayllari ro'yxati so'raladi. Keyin Udemy dars uchun ko'rsatgan yoki dars sahifasining o'zi so'ragan subtitr faylini kengaytma shu saytdan yuklab oladi (cookie'siz). YouTube'da (siz yoqqan sayt) YouTube player'ining o'zi so'ragan subtitrning inglizcha treki cookie'siz yuklanadi; CC o'chiq bo'lsa, kengaytma shu so'rov uchun CC'ni yoqadi va keyin yana o'chiradi |
+| **Kurs saytlaridagi ma'lumotni o'qish va o'zgartirish** — Sado doim ishlaydigan saytlar (Udemy, Frontend Masters) uchun | O'rnatish paytida | Dars subtitrini o'qish va video ustida o'zbekcha subtitrni ko'rsatish |
+| **Tarjima va ovoz servislari manzillari** — Gemini, Anthropic, OpenAI, OpenRouter, Groq, Azure | O'rnatish paytida | So'rovni siz tanlagan servisga to'g'ridan-to'g'ri yuborish. Boshqa servislarga hech narsa ketmaydi |
+| **Faqat shu saytga ruxsat** — YouTube va Coursera uchun | Shu saytni yoqqaningizda | Yuqoridagi bilan bir xil, lekin faqat siz yoqqan saytda |
+| **Barcha saytlarga ruxsat** — boshqa kurs saytlari uchun | Ro'yxatda yo'q saytni yoqqaningizda | Bunday saytlarda subtitr fayli ko'pincha boshqa manzildan yuklanadi. Sado paneli faqat siz yoqqan saytlarda ishlaydi; boshqa varaqda subtitrga o'xshash so'rov manzili ko'rilsa, u faqat vaqtincha brauzerda qoladi |
+| **Xotira** (`storage`, `unlimitedStorage`) | O'rnatish paytida | API key, sozlamalar, atamalar va kutubxonani brauzeringizda saqlash; kutubxona odatiy 10 MB chegaradan katta bo'lishi mumkin |
+| **Tarmoq so'rovlarini kuzatish** (`webRequest`) | O'rnatish paytida | Dars sahifasi yuklagan subtitr faylini topish. So'rovlar to'silmaydi va o'zgartirilmaydi |
+| **Skript qo'shish** (`scripting`) | O'rnatish paytida | Siz yoqqan saytda va ochiq varaqlarda Sadoni sahifani yangilamasdan ishga tushirish |
+| **Joriy varaq** (`activeTab`) | O'rnatish paytida | Sado oynasi ochilganda joriy sayt manzilini bilish — shu saytda yoqishni taklif qilish uchun |
+| **Yon panel** (`sidePanel`) | O'rnatish paytida | Darsning matnini brauzer yon panelida ko'rsatish |
+| **Fon hujjati** (`offscreen`) | O'rnatish paytida | Sahifa audio ijroga ruxsat bermaganda Azure ovozini kengaytmaning o'zida ijro etish |
 
-Sozlamalar sahifasidagi sinovlar ("Ulanishni tekshirish", "Ovozni eshitish", talaffuzni tinglash) faqat sinov
-matnini yoki siz yozgan so'zni o'sha servisga yuboradi — dars matnini emas. Model ro'yxati tanlangan tarjima
-servisidan saqlangan API keyingiz bilan so'raladi; bu so'rovda hech qanday matn yo'q.
+Siz yoqqan saytda Sadoni o'chirish uchun Sado oynasida «Bu saytda o'chirish» tugmasini bosing. Shu sayt uchun
+berilgan ruxsat ham bekor qilinadi; «Barcha saytlarga ruxsat» esa u bilan yoqilgan oxirgi sayt o'chirilganda
+qaytariladi.
 
-Har bir servis olgan ma'lumotni o'z shartlari va maxfiylik siyosati bo'yicha qayta ishlaydi.
+## 8. Ma'lumotlarni ko'rish va o'chirish
 
-**Gemini bepul tarifi.** Bepul tarifda Google yuborilgan matndan (tarjima ham, Gemini TTS ham) o'z mahsulotlarini yaxshilash uchun
-foydalanishi mumkin. Gemini API'dan faqat 18 yoshdan oshganlar foydalana oladi. Batafsil:
-[Gemini API qo'shimcha shartlari](https://ai.google.dev/gemini-api/terms). Buni istamasangiz, ma'lumotdan
-o'qitish uchun foydalanmaydigan pullik tarifni yoki boshqa servisni tanlang.
+Asosiy ma'lumotlarni Sado sozlamalarida ko'rishingiz va o'chirishingiz mumkin:
 
-## Rozilik
+- **API key** — Sozlamalar → Tarjima (Azure keyi uchun — Ovoz) → API key yonidagi «O'chirish» tugmasi.
+- **Saqlangan darslar** — Sozlamalar → Kutubxona → bitta dars yoki «Hammasini o'chirish».
+- **Atamalar** — Sozlamalar → Atamalar.
+- **Rozilik** — Sozlamalar → Maxfiylik → «Rozilikni qaytarib olish».
+- **Hammasini birdan** — Sadoni brauzerdan o'chirib tashlang. Brauzer Sado saqlagan barcha ma'lumotni o'zi
+  o'chiradi. Shundan keyin brauzer GitHub'dagi qisqa fikr sahifasini ochadi; uning manziliga hech qanday ma'lumot
+  qo'shilmaydi.
 
-Rozilik tarjima servisini sozlashda beriladi: tanishuv va sozlamalar sahifasida **Roziman — saqlash va tekshirish**
-tugmasining ustida dars subtitri tanlangan servisga, ovoz uchun o'zbekcha matn Microsoft'ga yoki (brauzerda o'zbek ovozi bo'lmasa va servis Gemini bo'lsa) Google'ga yuborilishi aytiladi.
-Rozilik faqat tanlangan servisga tegishli: boshqasiga o'tsangiz, qayta so'raladi. Rozilik yo'q bo'lsa (masalan
-servis almashgan yoki oluvchilar ro'yxati o'zgargan), panelda **Roziman** tugmali qisqa so'rov chiqadi; uni
-bosmaguningizcha hech narsa yuborilmaydi. To'liq ro'yxat (oluvchilar, qurilmada nima qoladi, Gemini sharti)
-sozlamalar sahifasining "Maxfiylik" bo'limida. Rozilik (versiya, servis va sana) shu qurilmada saqlanadi.
-Rozilikni istalgan vaqtda qaytarib olishingiz mumkin: Sozlamalar → "Maxfiylik" → **Rozilikni qaytarib olish**.
-Shundan keyin dars matni hech qayerga yuborilmaydi, ochiq darslarda tarjima va ovoz darhol to'xtaydi.
+Ovoz keshi, ish o'lchovlari va diagnostika jurnalini alohida o'chiradigan tugma yo'q: ular hajm yoki son chegarasida
+o'z-o'zidan eskiradi, kutubxonadan dars o'chirilganda esa o'chmaydi. Ularning hammasi Sadoni brauzerdan o'chirganda
+o'chadi.
 
-## Qurilmada nima saqlanadi
+Servislarga yuborilgan matn ularning o'z qoidalari bo'yicha saqlanadi. Uni o'chirish uchun o'sha servisga murojaat
+qiling.
 
-Brauzerning kengaytma xotirasida (`chrome.storage.local`), faqat shu brauzer profilida. Boshqa qurilmaga
-sinxronlanmaydi.
+## 9. Xavfsizlik
 
-- **API keylari** (tarjima servisi, Azure) — kengaytmaning fon qismida. Veb-sahifa ham, sahifadagi
-  kengaytma skripti ham ularni o'qiy olmaydi.
-- **Sozlamalar** — tanlangan servis va model, ovoz dvigateli va tanlangan ovoz, Azure hududi, panel rejimi
-  (O'chiq / Subtitr / Ovoz) va subtitr ko'rinishi, rozilik yozuvi, siz qo'ygan kunlik token chegarasi.
-- **Lug'atlar** — siz yozgan atamalar va talaffuzlar, tarjima servisidan o'rganilgan atamalar talaffuzi.
-- **Tarjima keshi** — har dars uchun: dars identifikatori (siz yoqqan saytlarda — sahifa manzili) va sarlavhasi,
-  inglizcha subtitr matni, o'zbekcha tarjima, vaqtlar va qaysi model tarjima qilgani. Kesh o'sha darsni qayta
-  ochganingizda servisga qayta pul to'lamaslik uchun kerak.
-- **Ovoz keshi** — kengaytmaning IndexedDB'ida: Azure yoki Gemini TTS sintez qilgan audio, shunda qayta eshitganda
-  jumlalar qayta yuborilmaydi.
-- **Gemini TTS kunlik hisobi** — bugungi sana, shu kunda yuborilgan ovoz so'rovlari soni va limit tugaganmi, hamda
-  API keyning qaytarib bo'lmaydigan barmoq izi (SHA-256 boshi, key'ning o'zi emas). Panel qancha ovoz qolganini
-  shundan ko'rsatadi; yozuv har kuni yangilanadi va hech qayerga yuborilmaydi.
-- **Diagnostika jurnali** — oxirgi 50 ta xatoning kodi (masalan `auth`, `timeout`), ish turi (tarjima, subtitr,
-  ovoz, model ro'yxati), vaqti, davomiyligi va soni, subtitr xatosida esa qaysi saytda (masalan `udemy`; sahifa
-  manzili emas). Subtitr matni, tarjima va API keylar unga yozilmaydi. Jurnal
-  o'zi hech qayerga yuborilmaydi: Sozlamalar → "Yordam" → "Diagnostikani nusxalash" uni kengaytma versiyasi,
-  brauzer nomi, servis va model nomi hamda ovoz holati bilan birga nusxalaydi, kimga yuborishni esa o'zingiz hal
-  qilasiz. "Telegram'da xabar berish" ham faqat nusxalaydi va dasturchining Telegram sahifasini ochadi: xabarni
-  o'zingiz yozasiz va yuborasiz.
-- **Model tezligi** — oxirgi 20 ta servis va model juftligi uchun: soniyasiga o'rtacha chiqish tokeni, o'lchovlar
-  soni va oxirgisining vaqti. Matn saqlanmaydi. "Diagnostikani nusxalash" ga (vaqtsiz) kiradi, o'zi hech qayerga
-  yuborilmaydi.
-- **Kunlik sarf** — bugungi sana, shu kunda servis javob bergan so'rovlar (tarjima va Gemini TTS) soni va ular
-  sarflagan tokenlar. Sado siz qo'ygan kunlik chegarada shundan to'xtaydi va chegara maydoni ostida bugungi sarfni
-  ko'rsatadi; yozuv har kuni yangilanadi va hech qayerga yuborilmaydi.
-- **Ovoz sinxronligi** — oxirgi 10 ta dars uchun: sayt, dars identifikatori, ovoz dvigateli va ovoz videoga
-  qanchalik ulgurgani (eng katta kechikish, sekinlashtirilgan soniyalar, to'xtashlar, o'qilgan va tashlab ketilgan
-  jumlalar soni). Matn saqlanmaydi. "Diagnostikani nusxalash" ga dars identifikatorisiz kiradi, o'zi hech qayerga
-  yuborilmaydi.
-- **Tarjima o'lchovi** — oxirgi 10 ta dars uchun (boshqa model bilan qayta tarjima qilingan dars alohida yozuv
-  oladi): sayt, dars identifikatori, servis va model, nechta jumla tarjima qilingani, servis nechta so'rovga javob
-  bergani va ular sarflagan tokenlar (o'ylash va keshdan o'qilgan tokenlar bilan), nechta so'rov qayta yuborilgani,
-  bo'lingani, rad etilgani yoki javob chegarasida kesilgani, nechta tarjima jumla vaqtiga sig'magani, inglizcha
-  qolgani yoki lotin bo'lmagan harf bilan chiqqani. Matn saqlanmaydi. "Diagnostikani nusxalash" ga dars
-  identifikatorisiz kiradi, o'zi hech qayerga yuborilmaydi.
-- **Ovoz vaqti** — oxirgi 10 ta ishlatilgan ovoz uchun o'lchangan nutq tezligi va boshlanish kechikishi: ovoz har
-  jumlaning vaqtiga sig'ishi uchun. Matn saqlanmaydi.
-- **Yangilanish belgisi** — Sado qaysi versiyaga yangilangani (faqat versiya raqami): popup "Sado yangilandi"
-  ro'yxatini ko'rsatadi, "Tushunarli" bosilganda yozuv o'chiriladi.
+- Barcha so'rovlar shifrlangan HTTPS ulanish orqali yuboriladi.
+- API key kengaytma xotirasida saqlanadi — saytlar uni o'qiy olmaydi. Ammo u alohida parol bilan himoyalanmagan:
+  kompyuteringizdagi brauzer profilingizga kira oladigan odam uni ko'rishi mumkin. Umumiy kompyuterda ishlagan
+  bo'lsangiz, ishdan keyin API keyni o'chiring.
+- API keyingizni hech kimga bermang. Agar u begonalarga ma'lum bo'lib qolsa, uni o'sha servis sahifasida (Gemini
+  uchun — Google AI Studio) o'chirib, yangisini yarating.
 
-Vaqtinchalik (`chrome.storage.session`, brauzer yopilganda o'chadi): dars sahifasi so'ragan subtitr fayllari va
-subtitr manzilini topishga yordam beradigan so'rovlar (masalan master.dev dars ma'lumoti) manzili, turi va qaysi
-sahifadan so'ralgani — har varaq uchun ko'pi bilan 50 ta. Varaq yopilganda uning yozuvlari o'chiriladi.
-Kengaytma boshqa so'rovlarni saqlamaydi, hech qaysi so'rovni to'smaydi yoki o'zgartirmaydi.
+## 10. Bolalar
 
-## Qanday o'chirish mumkin
+Sado 18 yoshga to'lmaganlar uchun mo'ljallanmagan: Gemini API shartlariga ko'ra undan faqat 18 yosh va undan katta
+odamlar foydalanishi mumkin. Biz hech kimdan, jumladan bolalardan ham, shaxsiy ma'lumot yig'maymiz.
 
-- **Tarjima keshi:** Sozlamalar → "Kutubxona" → darsning o'chirish tugmasi (bitta dars) yoki "Hammasini o'chirish".
-- **Tarjima servisi API keyi:** Sozlamalar → "Tarjima" → "API key" → "O'chirish".
-- **Hammasi** (Azure API keyi, lug'atlar, o'rganilgan talaffuzlar, rozilik ham): kengaytmani brauzerdan o'chiring —
-  brauzer uning barcha mahalliy ma'lumotini ham o'chiradi. Shundan keyin brauzer ochiq repodagi qisqa
-  [fikr sahifasini](https://github.com/namazbaev/sado/blob/main/FEEDBACK.md) ochadi (nima yoqmaganini Telegram'da so'raydi). Manziliga hech qanday ma'lumot
-  qo'shilmaydi; sahifani GitHub odatdagi sahifa kabi ko'rsatadi.
-- Servislar tomonidagi ma'lumot o'sha servisning siyosati bo'yicha o'chiriladi.
+## 11. Chrome Web Store talablari
 
-## Sotilmaydi va uzatilmaydi
+Sado ma'lumotlardan Chrome Web Store foydalanuvchi ma'lumotlari siyosatiga, jumladan
+[«Cheklangan foydalanish» (Limited Use)](https://developer.chrome.com/docs/webstore/program-policies/limited-use/)
+talablariga muvofiq foydalanadi. Bu degani: ma'lumotlar faqat Sadoning asosiy vazifasi — darslarni tarjima qilish va
+o'qib berish uchun ishlatiladi. Ular sotilmaydi, reklama uchun ishlatilmaydi va kredit to'lash qobiliyatini baholash
+uchun berilmaydi.
 
-Sado ma'lumotni sotmaydi, reklama uchun ishlatmaydi va yuqorida nomlangan, siz tanlagan servislardan boshqa
-hech kimga bermaydi. Ma'lumot faqat kengaytmaning yagona vazifasi — subtitrni tarjima qilish va ovozlash — uchun
-ishlatiladi. Chrome Web Store'ning foydalanuvchi ma'lumotlari siyosatiga, jumladan Limited Use talablariga amal
-qilinadi.
+## 12. Siyosatdagi o'zgarishlar
 
-## Bolalar
+Siyosat o'zgarsa, yangi matn shu sahifada yangi sana va versiya raqami bilan chiqadi. Muhim o'zgarish bo'lsa
+(masalan, yangi servis qo'shilsa), Sado bu haqda kengaytmaning o'zida xabar beradi va roziligingizni qayta so'raydi.
+Oldingi versiyalar ro'yxati sahifa oxirida.
 
-Sado 13 yoshgacha bolalarga mo'ljallanmagan. Gemini API'dan foydalanish uchun 18 yosh talab qilinadi.
+## 13. Aloqa
 
-## O'zgarishlar
+Maxfiylik bo'yicha savol, taklif yoki ma'lumotni o'chirish haqida so'rovingiz bo'lsa,
+[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com) manziliga yoki Telegram'da
+[t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev) ga yozing. Xatda Sado versiyasini ko'rsating:
+Sozlamalar → Yordam → «Diagnostikani nusxalash» uni o'zi qo'shadi.
 
-Siyosat o'zgarsa, shu hujjat yangilanadi. Ma'lumot oluvchilar ro'yxati o'zgarsa, kengaytma yangi servisga
-birinchi so'rovdan oldin rozilikni qayta so'raydi.
+---
 
-## Aloqa
+Bu siyosat o'zbek, ingliz va rus tillarida e'lon qilingan: [O'zbekcha](PRIVACY.uz.md) · [English](PRIVACY.en.md) ·
+[Русский](PRIVACY.ru.md). Tarjimalar orasida farq bo'lsa, o'zbekcha matn asos qilib olinadi.
 
-Telegram: [t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev) · E-pochta:
-[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com)
+### Versiyalar tarixi
+
+- **1.0** — 2026-yil 25-oktabr. Siyosat qayta yozildi: qisqacha, ma'lumotlar va ruxsatlar jadvali, versiya raqami.
