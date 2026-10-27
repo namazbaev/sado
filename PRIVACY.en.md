@@ -1,6 +1,6 @@
 # Privacy policy
 
-Effective date: October 25, 2026 · Version 1.1
+Effective date: October 28, 2026 · Version 1.2
 
 Sado is an extension for Chrome and Microsoft Edge. It adds Uzbek subtitles and voice-over to online course videos.
 This page explains what data Sado works with, where it is stored and who it is sent to.
@@ -164,9 +164,14 @@ Previous versions are listed at the end of the page.
 ## 13. Contact
 
 For privacy questions, suggestions or data deletion requests, write to
-[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com) or on Telegram at
-[t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev). Please include your Sado version: Settings → Yordam
+[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com) or to the Sado support bot on Telegram,
+[@sado_support_bot](https://t.me/sado_support_bot). Please include your Sado version: Settings → Yordam
 (Help) → «Diagnostikani nusxalash» (copy diagnostics) adds it for you.
+
+Messages you send to the bot, along with your name and Telegram username, are passed to the Sado author so they can
+reply. A small program on Cloudflare relays them. It does not store message text: to avoid repeating the "delivered" reply,
+it keeps only your Telegram ID and the time, and deletes them within 7 hours. The conversation stays in Telegram
+chats.
 
 ---
 
@@ -175,6 +180,8 @@ This policy is published in Uzbek, English and Russian: [O'zbekcha](PRIVACY.uz.m
 
 ### Version history
 
+- **1.2** — October 28, 2026. Contact: the Sado support bot on Telegram instead of a personal account; how messages
+  to the bot are delivered.
 - **1.1** — October 25, 2026. The Azure Speech voice was removed: Sado no longer sends anything to Azure, and a
   previously saved Azure API key and region are deleted from your browser after the update.
 - **1.0** — October 25, 2026. Policy rewritten: summary, data and permissions tables, version number.

@@ -1,6 +1,6 @@
 # Maxfiylik siyosati
 
-Kuchga kirgan sana: 2026-yil 25-oktabr · Versiya 1.1
+Kuchga kirgan sana: 2026-yil 28-oktabr · Versiya 1.2
 
 Sado — Chrome va Microsoft Edge uchun kengaytma. U onlayn kurs videolariga o'zbekcha subtitr va ovoz qo'shadi. Bu
 sahifada Sado qanday ma'lumot bilan ishlashi, uni qayerda saqlashi va kimga yuborishi yozilgan.
@@ -166,9 +166,14 @@ Oldingi versiyalar ro'yxati sahifa oxirida.
 ## 13. Aloqa
 
 Maxfiylik bo'yicha savol, taklif yoki ma'lumotni o'chirish haqida so'rovingiz bo'lsa,
-[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com) manziliga yoki Telegram'da
-[t.me/shakhzod_namazbaev](https://t.me/shakhzod_namazbaev) ga yozing. Xatda Sado versiyasini ko'rsating:
+[namazbaevshakhzod@gmail.com](mailto:namazbaevshakhzod@gmail.com) manziliga yoki Telegram'dagi Sado yordam botiga
+[@sado_support_bot](https://t.me/sado_support_bot) yozing. Xatda Sado versiyasini ko'rsating:
 Sozlamalar → Yordam → «Diagnostikani nusxalash» uni o'zi qo'shadi.
+
+Botga yozgan xabaringiz, ismingiz va Telegram username'ingiz javob berish uchun Sado muallifiga yetkaziladi. Xabarni
+Cloudflare'dagi kichik dastur uzatadi. U xabar matnini saqlamaydi: "yetkazildi" javobini qayta-qayta yubormaslik
+uchun faqat Telegram ID'ingiz va vaqtni eslab qoladi va ularni 7 soat ichida o'chiradi. Yozishma Telegram chatlarida
+qoladi.
 
 ---
 
@@ -177,6 +182,8 @@ Bu siyosat o'zbek, ingliz va rus tillarida e'lon qilingan: [O'zbekcha](PRIVACY.u
 
 ### Versiyalar tarixi
 
+- **1.2** — 2026-yil 28-oktabr. Aloqa: Telegram'da shaxsiy akkaunt o'rniga Sado yordam boti; botga yozilgan
+  xabarlar qanday yetkazilishi.
 - **1.1** — 2026-yil 25-oktabr. Azure Speech ovozi olib tashlandi: Sado endi Azure'ga hech narsa yubormaydi,
   avval saqlangan Azure API keyi va hududi yangilanishdan keyin brauzeringizdan o'chiriladi.
 - **1.0** — 2026-yil 25-oktabr. Siyosat qayta yozildi: qisqacha, ma'lumotlar va ruxsatlar jadvali, versiya raqami.
